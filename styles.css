@@ -846,7 +846,7 @@ h1, h2, h3, h4 {
 
 .publications-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -1241,6 +1241,11 @@ h1, h2, h3, h4 {
         font-size: 0.8rem;
         padding: 0.45rem 0.75rem;
     }
+    
+    /* Hide Join Us button in tablet horizontal */
+    .nav-wrapper .btn-primary {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1354,6 +1359,7 @@ h1, h2, h3, h4 {
     
     .publications-row {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .about-grid {
