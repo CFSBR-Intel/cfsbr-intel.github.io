@@ -840,10 +840,15 @@ h1, h2, h3, h4 {
 }
 
 .publications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    display: block;
     margin-bottom: 3rem;
+}
+
+.publications-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .publication-card {
@@ -1344,6 +1349,10 @@ h1, h2, h3, h4 {
     }
     
     .activities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .publications-row {
         grid-template-columns: 1fr;
     }
     
