@@ -22,6 +22,24 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improve touch targets for mobile */
+button, a, .nav-link {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 h1, h2, h3, h4 {
@@ -944,6 +962,27 @@ h1, h2, h3, h4 {
         gap: 1rem;
     }
     
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .mission-card,
+    .vision-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .card-icon {
+        margin: 0 auto 1rem;
+    }
+    
     .hero-title-main {
         font-size: 2.5rem;
     }
@@ -957,11 +996,27 @@ h1, h2, h3, h4 {
         font-size: 2rem;
     }
     
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
     .section-title {
         font-size: 2rem;
     }
     
+    .section-description {
+        font-size: 1rem;
+    }
+    
     .activities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-grid {
         grid-template-columns: 1fr;
     }
     
@@ -982,6 +1037,12 @@ h1, h2, h3, h4 {
         width: 150px;
         height: 150px;
     }
+    
+    .btn-primary,
+    .btn-secondary {
+        font-size: 0.875rem;
+        padding: 0.75rem 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -989,18 +1050,46 @@ h1, h2, h3, h4 {
         padding: 0 1rem;
     }
     
+    .header {
+        padding: 0.75rem 0;
+    }
+    
+    .logo-image {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.25rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.75rem;
+    }
+    
+    .nav-link {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .btn-primary {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+    
     .hero {
         padding: 2rem 0 3rem;
     }
     
-    .hero-buttons {
-        flex-direction: column;
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
     }
     
-    .hero-buttons button {
-        width: 100%;
+    .hero-title-wrapper {
+        gap: 0.5rem;
     }
-
+    
     .hero-title-main {
         font-size: 2rem;
     }
@@ -1008,5 +1097,78 @@ h1, h2, h3, h4 {
     .hero-logo-inline {
         width: 40px;
         height: 40px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.875rem;
+    }
+    
+    .hero-heading {
+        font-size: 1.5rem;
+    }
+    
+    .hero-description {
+        font-size: 0.875rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .hero-buttons button {
+        width: 100%;
+    }
+    
+    .mission-card h4,
+    .vision-card h4 {
+        font-size: 1.25rem;
+    }
+    
+    .mission-card p,
+    .vision-card p {
+        font-size: 0.875rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-description {
+        font-size: 0.875rem;
+    }
+    
+    .value-card h3,
+    .about-card h3 {
+        font-size: 1.125rem;
+    }
+    
+    .value-card p,
+    .about-card p {
+        font-size: 0.875rem;
+    }
+    
+    .activity-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .activity-card p {
+        font-size: 0.875rem;
+    }
+    
+    .goals-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .goals-list li {
+        font-size: 0.875rem;
+    }
+    
+    .member-name {
+        font-size: 1.125rem;
+    }
+    
+    .member-role {
+        font-size: 0.875rem;
     }
 }
