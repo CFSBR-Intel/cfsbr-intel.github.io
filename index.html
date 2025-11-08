@@ -3,12 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIBARS - Army Institute of Business Administration Research Society</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>AIBARS - Army Institute of Business Administration Research Society | Student Research Organization in Sylhet</title>
+    <meta name="title" content="AIBARS - Army Institute of Business Administration Research Society">
+    <meta name="description" content="AIBARS is a premier student-led research society at Army Institute of Business Administration, Sylhet. We empower students through groundbreaking research, publications, workshops, and academic excellence in business studies.">
+    <meta name="keywords" content="AIBARS, Army IBA, Research Society, Sylhet, Bangladesh, Student Research, Business Research, Academic Publications, IJSMR, BBA Research, Student Organization, Research Excellence">
+    <meta name="author" content="Md Golam Mubasshir Rafi">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aibars.org/">
+    <meta property="og:title" content="AIBARS - Army IBA Research Society">
+    <meta property="og:description" content="Premier student-led research society at Army Institute of Business Administration, Sylhet. Empowering students through research excellence and innovation.">
+    <meta property="og:image" content="https://aibars.org/AIBARS%20logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aibars.org/">
+    <meta property="twitter:title" content="AIBARS - Army IBA Research Society">
+    <meta property="twitter:description" content="Premier student-led research society at Army Institute of Business Administration, Sylhet. Empowering students through research excellence and innovation.">
+    <meta property="twitter:image" content="https://aibars.org/AIBARS%20logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="AIBARS logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aibars.org/">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Structured Data / Schema.org for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AIBARS - Army Institute of Business Administration Research Society",
+      "alternateName": "AIBARS",
+      "url": "https://aibars.org",
+      "logo": "https://aibars.org/AIBARS%20logo.png",
+      "description": "AIBARS is a premier student-led research society at Army Institute of Business Administration, Sylhet, Bangladesh. We empower students through groundbreaking research, publications, and academic excellence.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sylhet",
+        "addressCountry": "Bangladesh"
+      },
+      "sameAs": [
+        "https://www.facebook.com/aibars",
+        "https://www.linkedin.com/company/aibars"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "General Inquiry",
+        "email": "contact@aibars.org"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -38,11 +98,11 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" role="banner" itemscope itemtype="https://schema.org/WPHeader">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-left">
-                    <div class="badge">Army Institute of Business Administration, Sylhet</div>
+                    <div class="badge" itemprop="publisher">Army Institute of Business Administration, Sylhet</div>
                     <div class="hero-title-wrapper">
                         <img src="AIBARS logo.png" alt="AIBARS Logo" class="hero-logo-inline">
                         <h1 class="hero-title-main">AIBARS</h1>
@@ -327,26 +387,26 @@
     </section>
 
     <!-- Publications Section -->
-    <section class="publications-section" id="publications">
+    <section class="publications-section" id="publications" itemscope itemtype="https://schema.org/ScholarlyArticle">
         <div class="container">
             <h2 class="section-title">Student <span class="text-green">Publications</span></h2>
-            <p class="section-description">
+            <p class="section-description" itemprop="about">
                 Our students have published groundbreaking research in prestigious national and international journals and conferences, contributing to the advancement of knowledge across various disciplines.
             </p>
             
             <div class="publications-grid">
-                <div class="publication-card">
+                <article class="publication-card" itemscope itemtype="https://schema.org/ScholarlyArticle">
                     <div class="publication-header">
-                        <span class="publication-type">Journal Article</span>
+                        <span class="publication-type" itemprop="articleSection">Journal Article</span>
                         <span class="publication-badge marketing">Employment</span>
                     </div>
-                    <h3>Investigation of Market Opportunities for BBA Graduates: A Case Study on Sylhet Metropolitan Area</h3>
-                    <p class="authors">Mohammed Safwan Ahmed, MD. Safwan Jumael Khan, Hameem Ahmed Chowdhury, Mehraj Ahmed</p>
+                    <h3 itemprop="headline">Investigation of Market Opportunities for BBA Graduates: A Case Study on Sylhet Metropolitan Area</h3>
+                    <p class="authors" itemprop="author">Mohammed Safwan Ahmed, MD. Safwan Jumael Khan, Hameem Ahmed Chowdhury, Mehraj Ahmed</p>
                     <p class="journal">
                         <i data-lucide="file-text" style="width: 16px; height: 16px;"></i>
-                        International Journal of Sustainability and Multidisciplinary Research (IJSMR) • 2025
+                        <span itemprop="publisher">International Journal of Sustainability and Multidisciplinary Research (IJSMR)</span> • <time itemprop="datePublished" datetime="2025">2025</time>
                     </p>
-                    <p class="description">A comprehensive case study examining employment market opportunities and career prospects for BBA graduates in Sylhet Metropolitan Area, analyzing industry demands and skill gaps.</p>
+                    <p class="description" itemprop="description">A comprehensive case study examining employment market opportunities and career prospects for BBA graduates in Sylhet Metropolitan Area, analyzing industry demands and skill gaps.</p>
                     <div class="publication-actions">
                         <button class="btn-view">
                             <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
