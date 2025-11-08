@@ -818,6 +818,182 @@ h1, h2, h3, h4 {
     transform: scale(1.05);
 }
 
+/* Publications Section */
+.publications-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.publication-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    border: 1px solid var(--border-gray);
+}
+
+.publication-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.publication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.publication-type {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--primary-green);
+    color: var(--white);
+}
+
+.publication-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--light-green);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.publication-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.publication-badge.finance {
+    background: #fff9e6;
+    color: #f59e0b;
+}
+
+.publication-badge.behavior {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.publication-badge.marketing {
+    background: #ede9fe;
+    color: #8b5cf6;
+}
+
+.publication-badge.sustainability {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.publication-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.publication-card .authors {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.publication-card .journal {
+    font-size: 0.875rem;
+    color: var(--primary-green);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.publication-card .description {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.publication-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.btn-download,
+.btn-view {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-download {
+    background: var(--primary-green);
+    color: var(--white);
+}
+
+.btn-download:hover {
+    background: #164430;
+}
+
+.btn-view {
+    background: var(--white);
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+}
+
+.btn-view:hover {
+    background: var(--light-green);
+}
+
+.publication-cta {
+    text-align: center;
+    background: var(--light-green);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+}
+
+.publication-cta p {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
 /* Footer */
 .footer {
     background: var(--primary-green);
