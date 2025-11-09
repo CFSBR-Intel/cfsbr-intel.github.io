@@ -902,37 +902,32 @@ h1, h2, h3, h4 {
 
 .publication-badge {
     display: inline-block;
-    padding: 0.45rem 0.95rem;
-    border-radius: 25px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    border: 2px solid;
-    text-transform: uppercase;
+    padding: 0.4rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
     letter-spacing: 0.3px;
 }
 
 .publication-badge.finance {
-    background: linear-gradient(135deg, #fff9e6 0%, #fef3c7 100%);
+    background: #fef3c7;
     color: #d97706;
-    border-color: #fbbf24;
 }
 
 .publication-badge.behavior {
-    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    background: #fee2e2;
     color: #dc2626;
-    border-color: #f87171;
 }
 
 .publication-badge.marketing {
-    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+    background: #ddd6fe;
     color: #7c3aed;
-    border-color: #a78bfa;
 }
 
 .publication-badge.sustainability {
-    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    background: #bbf7d0;
     color: #15803d;
-    border-color: #4ade80;
 }
 
 .publication-card h3 {
@@ -1022,52 +1017,47 @@ h1, h2, h3, h4 {
     flex-wrap: wrap;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
-    border-top: 2px solid rgba(30, 90, 60, 0.08);
+    border-top: 1px solid #e5e7eb;
 }
 
 .btn-download,
 .btn-view {
     flex: 1;
     min-width: 140px;
-    padding: 0.85rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    font-weight: 700;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .btn-download {
-    background: linear-gradient(135deg, var(--primary-green) 0%, #0f7a4a 100%);
+    background: var(--primary-green);
     color: var(--white);
-    box-shadow: 0 6px 20px rgba(30, 90, 60, 0.25);
 }
 
 .btn-download:hover {
-    background: linear-gradient(135deg, #0f7a4a 0%, var(--primary-green) 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(30, 90, 60, 0.35);
+    background: #0f7a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 90, 60, 0.3);
 }
 
 .btn-view {
     background: var(--white);
     color: var(--primary-green);
     border: 2px solid var(--primary-green);
-    box-shadow: 0 4px 15px rgba(30, 90, 60, 0.1);
 }
 
 .btn-view:hover {
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(30, 90, 60, 0.2);
-    border-color: #0f7a4a;
+    background: var(--primary-green);
+    color: var(--white);
+    transform: translateY(-2px);
 }
 
 .publication-cta {
@@ -1853,7 +1843,7 @@ h1, h2, h3, h4 {
 
 .publications-page-section {
     padding: 2rem 0 4rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+    background: #f9fafb;
 }
 
 .publications-filters {
