@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://aibars.org/sitemap.xml
+Sitemap: https://aibars.gmrafi.com/sitemap.xml
 
 # Crawl delay (optional, in seconds)
 Crawl-delay: 1
