@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Publications - AIBARS | Student Research Papers & Publications</title>
+    <meta name="title" content="Publications - AIBARS Research Society">
+    <meta name="description" content="Browse all research publications, journal articles, and conference papers by AIBARS members. Filter by type, author, and year.">
+    <meta name="keywords" content="AIBARS Publications, Research Papers, Journal Articles, Conference Papers, Student Research, BBA Research">
+    <meta name="author" content="Md Golam Mubasshir Rafi">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="AIBARS logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aibars.org/publications.html">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="aibalogo.jpg" alt="AIBA Logo" class="institutional-logo">
+                    <img src="AIBARS logo.png" alt="AIBARS Logo" class="club-logo">
+                    <div class="logo-text">
+                        <h1>AIBARS</h1>
+                        <p>Army IBA Research Society</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#values" class="nav-link">Values</a>
+                    <a href="index.html#activities" class="nav-link">Activities</a>
+                    <a href="publications.html" class="nav-link active">Publications</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="team.html" class="nav-link">Team</a>
+                </nav>
+                <button class="btn-primary">Join Us</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Student <span class="text-green">Publications</span></h1>
+            <p class="page-description">
+                Browse our collection of groundbreaking research papers, journal articles, and conference presentations
+            </p>
+        </div>
+    </section>
+
+    <!-- Publications Filter Section -->
+    <section class="publications-page-section">
+        <div class="container">
+            <!-- Filter Controls -->
+            <div class="publications-filters">
+                <div class="filter-group">
+                    <label for="typeFilter">
+                        <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+                        Publication Type
+                    </label>
+                    <select id="typeFilter" class="filter-select">
+                        <option value="all">All Types</option>
+                        <option value="Journal Article">Journal Article</option>
+                        <option value="Conference Paper">Conference Paper</option>
+                        <option value="Research Paper">Research Paper</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="authorFilter">
+                        <i data-lucide="user" style="width: 18px; height: 18px;"></i>
+                        Author
+                    </label>
+                    <select id="authorFilter" class="filter-select">
+                        <option value="all">All Authors</option>
+                        <option value="Mohammed Safwan Ahmed">Mohammed Safwan Ahmed</option>
+                        <option value="Mashrura Meshkat Punno">Mashrura Meshkat Punno</option>
+                        <option value="Md Golam Mubasshir Rafi">Md Golam Mubasshir Rafi</option>
+                        <option value="Israt Zarin Ruponty">Israt Zarin Ruponty</option>
+                        <option value="S. M. Mosaddad Ali">S. M. Mosaddad Ali</option>
+                        <option value="Sabikunnahar Mahi">Sabikunnahar Mahi</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="yearFilter">
+                        <i data-lucide="calendar" style="width: 18px; height: 18px;"></i>
+                        Year
+                    </label>
+                    <select id="yearFilter" class="filter-select">
+                        <option value="all">All Years</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+
+                <button id="resetFilters" class="btn-reset">
+                    <i data-lucide="refresh-ccw" style="width: 18px; height: 18px;"></i>
+                    Reset Filters
+                </button>
+            </div>
+
+            <!-- Publications Count -->
+            <div class="publications-count">
+                <p>Showing <strong id="countDisplay">4</strong> publications</p>
+            </div>
+
+            <!-- Publications List -->
+            <div class="publications-list">
+                <!-- Publication 1 -->
+                <article class="publication-item" data-type="Journal Article" data-authors="Mohammed Safwan Ahmed,MD. Safwan Jumael Khan,Hameem Ahmed Chowdhury,Mehraj Ahmed" data-year="2025">
+                    <div class="publication-header">
+                        <span class="publication-type">Journal Article</span>
+                        <span class="publication-badge marketing">Employment</span>
+                    </div>
+                    <h3>Investigation of Market Opportunities for BBA Graduates: A Case Study on Sylhet Metropolitan Area</h3>
+                    <p class="authors">Mohammed Safwan Ahmed, MD. Safwan Jumael Khan, Hameem Ahmed Chowdhury, Mehraj Ahmed</p>
+                    <p class="journal">
+                        <i data-lucide="file-text" style="width: 16px; height: 16px;"></i>
+                        International Journal of Sustainability and Multidisciplinary Research (IJSMR) • 2025
+                    </p>
+                    <p class="description">A comprehensive case study examining employment market opportunities and career prospects for BBA graduates in Sylhet Metropolitan Area, analyzing industry demands and skill gaps.</p>
+                    <div class="publication-actions">
+                        <button class="btn-view">
+                            <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                            View Paper
+                        </button>
+                        <button class="btn-download">
+                            <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                            Copy DOI
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Publication 2 -->
+                <article class="publication-item" data-type="Journal Article" data-authors="Mashrura Meshkat Punno,Md Golam Mubasshir Rafi" data-year="2025">
+                    <div class="publication-header">
+                        <span class="publication-type">Journal Article</span>
+                        <span class="publication-badge finance">Monetary Policy</span>
+                    </div>
+                    <h3>Examining the Role of Repo Rate in Controlling Inflation: Analyzing the Dynamics of the Proportional Relationship</h3>
+                    <p class="authors">Mashrura Meshkat Punno, Md Golam Mubasshir Rafi</p>
+                    <p class="journal">
+                        <i data-lucide="file-text" style="width: 16px; height: 16px;"></i>
+                        International Journal of Sustainability and Multidisciplinary Research (IJSMR) • 2025
+                    </p>
+                    <p class="description">This comprehensive study evaluates the effectiveness of repo rate adjustments as a primary monetary policy instrument for inflation control, examining the dynamics of proportional relationships and limitations in volatile economic conditions.</p>
+                    <div class="publication-actions">
+                        <button class="btn-view">
+                            <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                            View Paper
+                        </button>
+                        <button class="btn-download">
+                            <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                            Copy DOI
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Publication 3 -->
+                <article class="publication-item" data-type="Conference Paper" data-authors="Md Golam Mubasshir Rafi,Israt Zarin Ruponty" data-year="2025">
+                    <div class="publication-header">
+                        <span class="publication-type">Conference Paper</span>
+                        <span class="publication-badge marketing">Digital Finance</span>
+                    </div>
+                    <h3>Exploring Mobile Financial Services (MFS) Adoption and Basic Financial Literacy Among Market Merchants in Sylhet</h3>
+                    <p class="authors">Md Golam Mubasshir Rafi, Israt Zarin Ruponty</p>
+                    <p class="journal">
+                        <i data-lucide="file-text" style="width: 16px; height: 16px;"></i>
+                        International Conference on Financial Literacy and Economic Wellbeing (ICFLEW), BRAC University • 2025
+                    </p>
+                    <p class="description">Comprehensive study investigating MFS adoption patterns and basic financial literacy levels among market merchants in Sylhet, identifying barriers and proposing solutions for enhanced digital financial inclusion in local markets.</p>
+                    <div class="publication-actions">
+                        <a href="https://icflew.bracu.ac.bd/e-Proceedings_ICFLEW2025_Final.pdf" target="_blank" class="btn-view">
+                            <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                            View Proceedings
+                        </a>
+                        <a href="https://icflew.bracu.ac.bd/" target="_blank" class="btn-download">
+                            <i data-lucide="info" style="width: 16px; height: 16px;"></i>
+                            Full Details
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Publication 4 -->
+                <article class="publication-item" data-type="Conference Paper" data-authors="S. M. Mosaddad Ali,Sabikunnahar Mahi" data-year="2025">
+                    <div class="publication-header">
+                        <span class="publication-type">Conference Paper</span>
+                        <span class="publication-badge sustainability">Green Finance</span>
+                    </div>
+                    <h3>Green Finance and Climate Risk: Challenges and Opportunity for Sustainable Growth in Bangladesh</h3>
+                    <p class="authors">S. M. Mosaddad Ali, Sabikunnahar Mahi</p>
+                    <p class="journal">
+                        <i data-lucide="file-text" style="width: 16px; height: 16px;"></i>
+                        LURS 2nd Student Research Conference, Leading University Research Society (LURS) • 2025
+                    </p>
+                    <p class="description">Examining green finance mechanisms and climate risk management strategies for sustainable economic growth in Bangladesh's financial sector.</p>
+                    <div class="publication-actions">
+                        <a href="https://www.lursbd.com/papers" target="_blank" class="btn-view">
+                            <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                            View Proceedings
+                        </a>
+                        <a href="https://www.lursbd.com/" target="_blank" class="btn-download">
+                            <i data-lucide="info" style="width: 16px; height: 16px;"></i>
+                            Full Details
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <i data-lucide="search-x" style="width: 64px; height: 64px; color: #999; margin-bottom: 1rem;"></i>
+                <h3>No publications found</h3>
+                <p>Try adjusting your filters to see more results</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col footer-col-logo">
+                    <div class="footer-logo">
+                        <img src="AIBARS logo.png" alt="AIBARS Logo" class="footer-logo-img">
+                    </div>
+                    <h3 class="footer-brand">AIBARS</h3>
+                    <p class="footer-tagline">Research Society</p>
+                    <p class="footer-description">
+                        Inspiring and empowering students to lead groundbreaking research at Army Institute of Business Administration, Sylhet.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i data-lucide="instagram" style="width: 20px; height: 20px;"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#values">Core Values</a></li>
+                        <li><a href="index.html#activities">Activities</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Research Guidelines</a></li>
+                        <li><a href="#">Publication Policy</a></li>
+                        <li><a href="#">Events Calendar</a></li>
+                        <li><a href="#">Join AIBARS</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i data-lucide="map-pin" style="width: 18px; height: 18px;"></i>
+                            <span>Army Institute of Business Administration<br>Sylhet, Bangladesh</span>
+                        </li>
+                        <li>
+                            <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+                            <span>contact@aibars.org</span>
+                        </li>
+                        <li>
+                            <i data-lucide="phone" style="width: 18px; height: 18px;"></i>
+                            <span>+880 1XXX-XXXXXX</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 AIBARS - Army Institute of Business Administration Research Society. All rights reserved.</p>
+                <p>Designed & Developed by <strong class="developer-name">Md Golam Mubasshir Rafi</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Filter Functionality
+        const typeFilter = document.getElementById('typeFilter');
+        const authorFilter = document.getElementById('authorFilter');
+        const yearFilter = document.getElementById('yearFilter');
+        const resetBtn = document.getElementById('resetFilters');
+        const publicationItems = document.querySelectorAll('.publication-item');
+        const countDisplay = document.getElementById('countDisplay');
+        const noResults = document.getElementById('noResults');
+
+        function applyFilters() {
+            const selectedType = typeFilter.value;
+            const selectedAuthor = authorFilter.value;
+            const selectedYear = yearFilter.value;
+            let visibleCount = 0;
+
+            publicationItems.forEach(item => {
+                const itemType = item.getAttribute('data-type');
+                const itemAuthors = item.getAttribute('data-authors');
+                const itemYear = item.getAttribute('data-year');
+
+                const typeMatch = selectedType === 'all' || itemType === selectedType;
+                const authorMatch = selectedAuthor === 'all' || itemAuthors.includes(selectedAuthor);
+                const yearMatch = selectedYear === 'all' || itemYear === selectedYear;
+
+                if (typeMatch && authorMatch && yearMatch) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            countDisplay.textContent = visibleCount;
+            noResults.style.display = visibleCount === 0 ? 'flex' : 'none';
+        }
+
+        function resetFilters() {
+            typeFilter.value = 'all';
+            authorFilter.value = 'all';
+            yearFilter.value = 'all';
+            applyFilters();
+        }
+
+        typeFilter.addEventListener('change', applyFilters);
+        authorFilter.addEventListener('change', applyFilters);
+        yearFilter.addEventListener('change', applyFilters);
+        resetBtn.addEventListener('click', resetFilters);
+    </script>
+</body>
+</html>
