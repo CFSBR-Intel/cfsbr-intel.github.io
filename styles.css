@@ -858,6 +858,176 @@ h1, h2, h3, h4 {
     background: var(--white);
 }
 
+/* Intelligence & Insights Section - New Design */
+.intelligence-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+}
+
+.intelligence-category-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border-gray);
+    font-family: 'Playfair Display', serif;
+}
+
+.intelligence-category-title:first-of-type {
+    margin-top: 2rem;
+}
+
+.category-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    font-weight: 500;
+    max-width: 900px;
+}
+
+.intelligence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intelligence-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-gray);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.intelligence-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-status-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-coming-soon {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.status-in-progress {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.status-available {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-published {
+    background: #e9d5ff;
+    color: #7c3aed;
+}
+
+.card-type-badge {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    font-family: 'Playfair Display', serif;
+    padding-right: 100px;
+    flex-grow: 0;
+}
+
+.card-meta {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    display: block;
+}
+
+.card-authors {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: auto;
+    flex-grow: 1;
+}
+
+.btn-intelligence {
+    margin-top: 1.25rem;
+    padding: 0.7rem 1.25rem;
+    border: 2px solid var(--primary-blue);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: white;
+    color: var(--primary-blue);
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+.btn-intelligence:hover {
+    background: var(--primary-blue);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(61, 84, 230, 0.3);
+}
+
+.academic-card {
+    border-left: 4px solid #8b5cf6;
+}
+
+/* Original Publications Styles (kept for backwards compatibility) */
+
 .publications-grid {
     display: block;
     margin-bottom: 3rem;
@@ -1415,6 +1585,18 @@ h1, h2, h3, h4 {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .intelligence-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .intelligence-category-title {
+        font-size: 1.35rem;
+        margin-top: 2.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
     .hero-content {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1492,6 +1674,21 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+    .intelligence-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .intelligence-category-title {
+        font-size: 1.25rem;
+        margin-top: 2rem;
+    }
+    
+    .card-title {
+        font-size: 1.05rem;
+        padding-right: 95px;
+    }
+    
     .header {
         position: relative;
         padding: 0.75rem 0;
@@ -1631,6 +1828,39 @@ h1, h2, h3, h4 {
     .btn-secondary {
         font-size: 0.875rem;
         padding: 0.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intelligence-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .intelligence-category-title {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .intelligence-card {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+        padding-right: 90px;
+    }
+    
+    .card-status-badge {
+        top: 1rem;
+        right: 1rem;
+        font-size: 0.65rem;
+        padding: 0.3rem 0.65rem;
+    }
+    
+    .card-description {
+        font-size: 0.85rem;
     }
 }
 
@@ -2268,6 +2498,62 @@ h1, h2, h3, h4 {
     
     .collab-cta {
         font-size: 1.5rem;
+    }
+}
+
+/* Intelligence Section Responsive */
+@media (max-width: 768px) {
+    .intelligence-section {
+        padding: 3rem 0;
+    }
+    
+    .category-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .category-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .category-title {
+        font-size: 1.4rem;
+    }
+    
+    .category-tagline {
+        font-size: 0.875rem;
+    }
+    
+    .intelligence-card {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+        padding-right: 0;
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-status-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+    
+    .card-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .card-description {
+        font-size: 0.95rem;
+    }
+    
+    .btn-intelligence {
+        width: 100%;
+        justify-content: center;
     }
 }
 
