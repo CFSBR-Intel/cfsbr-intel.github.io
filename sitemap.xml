@@ -6,81 +6,89 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <!-- Homepage -->
     <url>
-        <loc>https://aibars.gmrafi.com/</loc>
-        <lastmod>2025-11-09</lastmod>
+        <loc>https://cfsbr.gmrafi.com/</loc>
+        <lastmod>2025-11-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
     <!-- Team Page -->
     <url>
-        <loc>https://aibars.gmrafi.com/team.html</loc>
-        <lastmod>2025-11-09</lastmod>
+        <loc>https://cfsbr.gmrafi.com/team.html</loc>
+        <lastmod>2025-11-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <!-- Gallery Page -->
     <url>
-        <loc>https://aibars.gmrafi.com/gallery.html</loc>
-        <lastmod>2025-11-09</lastmod>
+        <loc>https://cfsbr.gmrafi.com/gallery.html</loc>
+        <lastmod>2025-11-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <!-- Publications Page -->
     <url>
-        <loc>https://aibars.gmrafi.com/publications.html</loc>
-        <lastmod>2025-11-09</lastmod>
+        <loc>https://cfsbr.gmrafi.com/publications.html</loc>
+        <lastmod>2025-11-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- About Section -->
     <url>
-        <loc>https://aibars.gmrafi.com/#about</loc>
-        <lastmod>2025-11-09</lastmod>
+        <loc>https://cfsbr.gmrafi.com/#about</loc>
+        <lastmod>2025-11-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- Values Section -->
     <url>
-        <loc>https://aibars.gmrafi.com/#values</loc>
-        <lastmod>2025-11-09</lastmod>
+        <loc>https://cfsbr.gmrafi.com/#vision</loc>
+        <lastmod>2025-11-29</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
-    <!-- Objectives Section -->
+    <!-- Services Section -->
     <url>
-        <loc>https://aibars.gmrafi.com/#objectives</loc>
-        <lastmod>2025-11-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Activities Section -->
-    <url>
-        <loc>https://aibars.gmrafi.com/#activities</loc>
-        <lastmod>2025-11-09</lastmod>
+        <loc>https://cfsbr.gmrafi.com/#services</loc>
+        <lastmod>2025-11-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
-    <!-- Publications Section -->
+    <!-- Intelligence/Publications Section -->
     <url>
-        <loc>https://aibars.gmrafi.com/#publications</loc>
-        <lastmod>2025-11-09</lastmod>
+        <loc>https://cfsbr.gmrafi.com/#intelligence</loc>
+        <lastmod>2025-11-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- Team Section -->
     <url>
-        <loc>https://aibars.gmrafi.com/#team</loc>
-        <lastmod>2025-11-09</lastmod>
+        <loc>https://cfsbr.gmrafi.com/#team</loc>
+        <lastmod>2025-11-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    
+    <!-- Collaboration Section -->
+    <url>
+        <loc>https://cfsbr.gmrafi.com/#collaborate</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Contact Section -->
+    <url>
+        <loc>https://cfsbr.gmrafi.com/#contact</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>
