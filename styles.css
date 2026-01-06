@@ -37,6 +37,48 @@
     top: 0;
 }
 
+/* Under Construction Banner */
+.construction-banner {
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: #000;
+    text-align: center;
+    padding: 12px 20px;
+    position: relative;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.construction-banner p {
+    margin: 0;
+}
+
+.construction-banner button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.construction-banner button:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--text-dark);
