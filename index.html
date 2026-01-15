@@ -728,13 +728,29 @@
                 CFSBR Unified Dual-Wing Hierarchy - Four disciplines working together in research and execution
             </p>
             
+            <!-- Team Filter Dropdown -->
+            <div class="team-filter-container">
+                <label for="team-filter-index" class="filter-label">Navigate Team Sections:</label>
+                <select id="team-filter-index" class="team-filter-dropdown">
+                    <option value="">Select a section...</option>
+                    <option value="advisory-board-index">Level 01: Advisory Board</option>
+                    <option value="senior-fellows-index">Level 02: Senior Fellows</option>
+                    <option value="wing-a-index">Wing A: Research & Intelligence</option>
+                    <option value="wing-b-index">Wing B: Strategic Business & Innovation</option>
+                    <option value="founding-board-index">Level 05: Founding Board & Secretariat</option>
+                </select>
+            </div>
+            
             <!-- Level 01: Advisory Board -->
-            <h3 class="team-subsection-title">Level 01: Advisory Board</h3>
+            <h3 id="advisory-board-index" class="team-subsection-title">Level 01: Advisory Board</h3>
             <p class="team-description">Strategic Mentorship & Academic Credibility</p>
             <div class="leadership-grid">
                 <div class="team-card pillar-economics">
                     <div class="team-avatar">
-                        <i data-lucide="graduation-cap" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Professor of Economics</h3>
                     <p class="team-position">Academic Advisor</p>
@@ -743,7 +759,10 @@
                 
                 <div class="team-card pillar-finance">
                     <div class="team-avatar">
-                        <i data-lucide="trending-up" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Professor of Finance</h3>
                     <p class="team-position">Academic Advisor</p>
@@ -752,21 +771,39 @@
                 
                 <div class="team-card pillar-cse">
                     <div class="team-avatar">
-                        <i data-lucide="cpu" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Professor of CSE</h3>
                     <p class="team-position">Academic Advisor</p>
                     <span class="pillar-badge cse">CSE</span>
                 </div>
+                
+                <div class="team-card pillar-law">
+                    <div class="team-avatar">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="team-name">Professor of Law</h3>
+                    <p class="team-position">Academic Advisor</p>
+                    <span class="pillar-badge law">Law</span>
+                </div>
             </div>
 
             <!-- Level 02: Senior Fellows -->
-            <h3 class="team-subsection-title">Level 02: Senior Fellows (Industry & Research)</h3>
+            <h3 id="senior-fellows-index" class="team-subsection-title">Level 02: Senior Fellows (Industry & Research)</h3>
             <p class="team-description">The Bridge between Theory and Market</p>
             <div class="leadership-grid">
                 <div class="team-card pillar-finance">
                     <div class="team-avatar">
-                        <i data-lucide="building-2" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Senior Banking Executive</h3>
                     <p class="team-position">Industry Fellow</p>
@@ -775,7 +812,10 @@
                 
                 <div class="team-card pillar-cse">
                     <div class="team-avatar">
-                        <i data-lucide="code" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Senior Technology Executive</h3>
                     <p class="team-position">Industry Fellow</p>
@@ -784,7 +824,10 @@
                 
                 <div class="team-card pillar-law">
                     <div class="team-avatar">
-                        <i data-lucide="briefcase" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Senior Legal Executive</h3>
                     <p class="team-position">Industry Fellow</p>
@@ -793,14 +836,18 @@
             </div>
 
             <!-- Wing A: Research & Intelligence -->
-            <h3 class="team-subsection-title">🟢 Wing A: Research & Intelligence (The Academic Core)</h3>
+            <div class="team-major-section">
+            <h3 id="wing-a-index" class="team-subsection-title">Wing A: Research & Intelligence (The Academic Core)</h3>
             <p class="team-description">Theoretical Logic, Empirical Analysis, and Regulatory Frameworks</p>
 
             <h4 class="team-subsection-title">Research Leads (L3): Final Year & Graduates</h4>
             <div class="leadership-grid">
                 <div class="team-card pillar-economics">
                     <div class="team-avatar">
-                        <i data-lucide="bar-chart-3" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Economics Research Lead</h3>
                     <p class="team-position">Research Lead</p>
@@ -809,7 +856,10 @@
                 
                 <div class="team-card pillar-law">
                     <div class="team-avatar">
-                        <i data-lucide="file-text" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Legal Research Lead</h3>
                     <p class="team-position">Research Lead</p>
@@ -818,7 +868,10 @@
                 
                 <div class="team-card pillar-cse">
                     <div class="team-avatar">
-                        <i data-lucide="database" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">CSE Research Lead</h3>
                     <p class="team-position">Research Lead</p>
@@ -831,71 +884,81 @@
             <div class="leadership-grid">
                 <div class="team-card pillar-economics">
                     <div class="team-avatar">
-                        <i data-lucide="users" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
-                    <h3 class="team-name">Research Associate</h3>
-                    <p class="team-position">Economics</p>
+                    <h3 class="team-name">Economic & Finance Analyst</h3>
+                    <p class="team-position">Research Associate</p>
                     <span class="pillar-badge economics">Economics</span>
                 </div>
                 
                 <div class="team-card pillar-finance">
                     <div class="team-avatar">
-                        <i data-lucide="users" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
-                    <h3 class="team-name">Research Associate</h3>
-                    <p class="team-position">Finance</p>
+                    <h3 class="team-name">Economic & Finance Analyst</h3>
+                    <p class="team-position">Research Associate</p>
                     <span class="pillar-badge finance">Finance</span>
                 </div>
                 
                 <div class="team-card pillar-cse">
                     <div class="team-avatar">
-                        <i data-lucide="users" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
-                    <h3 class="team-name">Research Associate</h3>
-                    <p class="team-position">CSE</p>
+                    <h3 class="team-name">Computational Researcher</h3>
+                    <p class="team-position">Research Associate</p>
                     <span class="pillar-badge cse">CSE</span>
-                </div>
-                
-                <div class="team-card pillar-law">
-                    <div class="team-avatar">
-                        <i data-lucide="users" style="width: 48px; height: 48px; color: white;"></i>
-                    </div>
-                    <h3 class="team-name">Research Associate</h3>
-                    <p class="team-position">Law</p>
-                    <span class="pillar-badge law">Law</span>
                 </div>
             </div>
 
             <!-- Wing B: Strategic Business & Innovation -->
-            <h3 class="team-subsection-title">🔵 Wing B: Strategic Business & Innovation (The Execution Core)</h3>
+            <div class="team-major-section">
+            <h3 id="wing-b-index" class="team-subsection-title">Wing B: Strategic Business & Innovation (The Execution Core)</h3>
             <p class="team-description">Product Development, Business Modeling, and Market Entry</p>
 
             <h4 class="team-subsection-title">Innovation & Tech Leads (L3)</h4>
             <div class="leadership-grid">
                 <div class="team-card pillar-cse">
                     <div class="team-avatar">
-                        <i data-lucide="smartphone" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Innovation Lead</h3>
-                    <p class="team-position">CSE</p>
+                    <p class="team-position">Innovation Lead</p>
                     <span class="pillar-badge cse">CSE</span>
                 </div>
                 
                 <div class="team-card pillar-finance">
                     <div class="team-avatar">
-                        <i data-lucide="target" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Innovation Lead</h3>
-                    <p class="team-position">Finance</p>
+                    <p class="team-position">Innovation Lead</p>
                     <span class="pillar-badge finance">Finance</span>
                 </div>
                 
                 <div class="team-card pillar-law">
                     <div class="team-avatar">
-                        <i data-lucide="shield-check" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
                     <h3 class="team-name">Innovation Lead</h3>
-                    <p class="team-position">Law</p>
+                    <p class="team-position">Innovation Lead</p>
                     <span class="pillar-badge law">Law</span>
                 </div>
             </div>
@@ -905,43 +968,43 @@
             <div class="leadership-grid">
                 <div class="team-card pillar-economics">
                     <div class="team-avatar">
-                        <i data-lucide="lightbulb" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
-                    <h3 class="team-name">Innovation Associate</h3>
-                    <p class="team-position">Economics</p>
+                    <h3 class="team-name">Business Strategist</h3>
+                    <p class="team-position">Innovation Associate</p>
                     <span class="pillar-badge economics">Economics</span>
                 </div>
                 
                 <div class="team-card pillar-finance">
                     <div class="team-avatar">
-                        <i data-lucide="lightbulb" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
-                    <h3 class="team-name">Innovation Associate</h3>
-                    <p class="team-position">Finance</p>
+                    <h3 class="team-name">Business Strategist</h3>
+                    <p class="team-position">Innovation Associate</p>
                     <span class="pillar-badge finance">Finance</span>
                 </div>
                 
                 <div class="team-card pillar-cse">
                     <div class="team-avatar">
-                        <i data-lucide="lightbulb" style="width: 48px; height: 48px; color: white;"></i>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                            <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                            <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                        </svg>
                     </div>
-                    <h3 class="team-name">Innovation Associate</h3>
-                    <p class="team-position">CSE</p>
+                    <h3 class="team-name">Fintech Engineer</h3>
+                    <p class="team-position">Innovation Associate</p>
                     <span class="pillar-badge cse">CSE</span>
-                </div>
-                
-                <div class="team-card pillar-law">
-                    <div class="team-avatar">
-                        <i data-lucide="lightbulb" style="width: 48px; height: 48px; color: white;"></i>
-                    </div>
-                    <h3 class="team-name">Innovation Associate</h3>
-                    <p class="team-position">Law</p>
-                    <span class="pillar-badge law">Law</span>
                 </div>
             </div>
 
             <!-- Level 05: Founding Board & Secretariat -->
-            <h3 class="team-subsection-title">Level 05: Founding Board & Secretariat (The Foundation)</h3>
+            <h3 id="founding-board-index" class="team-subsection-title">Level 05: Founding Board & Secretariat (The Foundation)</h3>
             <p class="team-description">Visionary Infrastructure & Multidisciplinary Integration</p>
             <div class="leadership-grid">
                 <div class="team-card pillar-finance">
@@ -950,7 +1013,7 @@
                     </div>
                     <h3 class="team-name">Md Golam Mubasshir Rafi</h3>
                     <p class="team-position">Founding Member</p>
-                    <span class="pillar-badge finance">Finance</span>
+                    <span class="pillar-badge finance">Business Administration</span>
                 </div>
                 
                 <div class="team-card pillar-cse">
@@ -1173,6 +1236,24 @@
                     link.classList.add('active');
                 }
             });
+        });
+
+        // Team Filter Dropdown Functionality for Index Page
+        document.getElementById('team-filter-index').addEventListener('change', function() {
+            const selectedValue = this.value;
+            if (selectedValue) {
+                const targetElement = document.getElementById(selectedValue);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                    // Reset dropdown after navigation
+                    setTimeout(() => {
+                        this.value = '';
+                    }, 1000);
+                }
+            }
         });
     </script>
     </main>

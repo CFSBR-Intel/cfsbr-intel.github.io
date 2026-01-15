@@ -108,6 +108,27 @@ h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
 }
 
+h4.team-subsection-title {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+h4.team-subsection-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: var(--primary-green);
+    border-radius: 1px;
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -128,14 +149,14 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     gap: 2rem;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .logo-icon svg {
@@ -151,8 +172,8 @@ h1, h2, h3, h4 {
 }
 
 .club-logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
 }
 
@@ -216,16 +237,18 @@ h1, h2, h3, h4 {
 }
 
 .logo-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--primary-green);
-    line-height: 1.2;
+    line-height: 1.1;
+    margin: 0;
 }
 
 .logo-text p {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: var(--text-gray);
     font-family: 'Inter', sans-serif;
+    margin: 0;
 }
 
 .nav {
@@ -723,27 +746,97 @@ h1, h2, h3, h4 {
     background: #f9fafb;
 }
 
+/* Team Filter Styles */
+.team-filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0 3rem 0;
+    padding: 1.5rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-gray);
+}
+
+.filter-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.team-filter-dropdown {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-gray);
+    border-radius: 8px;
+    background: var(--white);
+    font-size: 1rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 250px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+.team-filter-dropdown:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(61, 84, 230, 0.1);
+}
+
+.team-filter-dropdown:hover {
+    border-color: var(--primary-blue);
+}
+
+.team-filter-dropdown option {
+    padding: 0.5rem;
+    background: var(--white);
+    color: var(--text-dark);
+}
+
 .team-subsection-title {
     font-size: 1.75rem;
     color: var(--text-dark);
-    margin: 2rem 0 1.5rem 0;
+    margin: 2rem 0 1rem 0;
     font-weight: 700;
     text-align: center;
+    position: relative;
 }
 
 .team-subsection-title:first-of-type {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+}
+
+.team-subsection-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
+    border-radius: 2px;
 }
 
 .leadership-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .team-card {
     background: var(--white);
-    padding: 1.5rem 1.5rem;
+    padding: 1rem 1rem;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
@@ -757,11 +850,11 @@ h1, h2, h3, h4 {
 }
 
 .team-avatar {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary-green), #0f3d26);
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -776,12 +869,12 @@ h1, h2, h3, h4 {
 }
 
 .team-name {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--text-dark);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     font-weight: 700;
     line-height: 1.4;
-    min-height: 2.5rem;
+    min-height: 2.2rem;
 }
 
 .team-position {
@@ -860,7 +953,7 @@ h1, h2, h3, h4 {
 }
 
 .team-card.founding-card::before {
-    content: "🏛️";
+    content: "";
     position: absolute;
     top: -10px;
     left: 50%;
@@ -891,12 +984,26 @@ h1, h2, h3, h4 {
 .team-description {
     color: var(--text-gray);
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 400;
+}
+
+/* Major section separator */
+.team-major-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.team-major-section:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
 }
 
 /* Activities Section */
@@ -1787,16 +1894,16 @@ h1, h2, h3, h4 {
     }
     
     .club-logo {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
     
     .logo-text h1 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .logo-text p {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
     
     /* Second Row: Menu */
@@ -1857,16 +1964,16 @@ h1, h2, h3, h4 {
     }
     
     .club-logo {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
     
     .logo-text h1 {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
     
     .logo-text p {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
     
     .nav {
@@ -2018,16 +2125,16 @@ h1, h2, h3, h4 {
     }
     
     .logo-image {
-        width: 55px;
-        height: 55px;
+        width: 45px;
+        height: 45px;
     }
     
     .logo-text h1 {
-        font-size: 1.35rem;
+        font-size: 1.1rem;
     }
     
     .logo-text p {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
     }
     
     .nav-link {
@@ -2158,7 +2265,7 @@ h1, h2, h3, h4 {
 }
 
 .team-section-full {
-    padding: 4rem 0;
+    padding: 3rem 0;
     background: #f9fafb;
 }
 
