@@ -43,7 +43,7 @@ To become the premier hybrid think-tank and innovation lab where the future of i
 - 🎯 **Strategic Objectives**: Long-term & short-term goals
 - 🔬 **What We Do**: Market intelligence, consultancy, capacity building, policy advocacy, fellowship programs
 - 📊 **Featured Intelligence**: Research publications and conference papers
-- 👥 **Team**: 4-tier structure (Advisory Board, Senior Fellows, Operations Core, Junior Associates)
+- 👥 **Team**: CFSBR Unified Dual-Wing Hierarchy (Advisory Board, Research & Intelligence Wing, Strategic Business & Innovation Wing, Founding Board & Secretariat)
 
 ---
 
