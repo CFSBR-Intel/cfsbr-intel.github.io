@@ -2808,3 +2808,112 @@ h4.team-subsection-title::after {
     }
 }
 
+/* Specialized Research Wings Page */
+.wings-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.wings-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.wings-intro .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.wings-intro .section-description {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.wings-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.wing-modern-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.wing-modern-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.wing-card-header {
+    background: linear-gradient(135deg, #5a7cfa 0%, #3D54E6 100%);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.wing-icon-wrapper {
+    margin-bottom: 1rem;
+}
+
+.wing-icon-modern {
+    width: 72px;
+    height: 72px;
+    color: white;
+    opacity: 0.9;
+}
+
+.wing-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+.wing-lead {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.wing-card-content {
+    padding: 2rem;
+}
+
+.wing-section-block {
+    margin-bottom: 2rem;
+}
+
+.wing-section-block:last-child {
+    margin-bottom: 0;
+}
+
+.wing-section-block h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 2px solid var(--light-green);
+    padding-bottom: 0.25rem;
+}
+
+.wing-section-block p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin: 0;
+}
+
