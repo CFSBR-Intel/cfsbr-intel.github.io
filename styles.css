@@ -376,7 +376,7 @@ h4.team-subsection-title::after {
 .hero-heading {
     font-size: 1.10rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     color: var(--text-dark);
     font-family: 'Playfair Display', serif;
     line-height: 1.2;
