@@ -286,12 +286,19 @@ h4.team-subsection-title::after {
     background: #3D54E6;
     color: var(--white);
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.85rem 1.75rem;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
     font-size: 1rem;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.2;
 }
 
 .btn-primary:hover {
@@ -3412,6 +3419,337 @@ h4.team-subsection-title::after {
 @media (max-width: 480px) {
     .affiliation-card {
         padding: 1.75rem;
+    }
+}
+
+/* ============================================
+   C.A.S.E. Sub-Page — Read Document CTAs
+   ============================================ */
+
+.btn-pdf-secondary {
+    flex: 1;
+    min-width: 200px;
+    min-height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    background: var(--white);
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+}
+
+.btn-pdf-secondary:hover {
+    background: var(--primary-green);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(30, 90, 60, 0.3);
+}
+
+.btn-pdf-download {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    min-height: 56px;
+}
+
+.publication-cta-group {
+    gap: 0.85rem;
+    margin: 2rem 0 1.5rem;
+}
+
+/* Mobile Reader Panel — shown on small screens */
+.mobile-reader-panel {
+    display: none;
+    background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%);
+    border: 1px solid var(--primary-green);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin: 1rem 0 2rem;
+    box-shadow: 0 4px 18px rgba(30, 90, 60, 0.08);
+}
+
+.mobile-reader-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-reader-header h4 {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    color: #064e3b;
+    font-weight: 700;
+}
+
+.mobile-reader-hint {
+    margin: 0 0 1.1rem;
+    font-size: 0.92rem;
+    color: #065f46;
+    line-height: 1.5;
+}
+
+.mobile-reader-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.btn-mobile-reader {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    background: white;
+    border: 1px solid rgba(30, 90, 60, 0.15);
+    color: #064e3b;
+    transition: all 0.2s ease;
+    min-height: 56px;
+}
+
+.btn-mobile-reader:hover,
+.btn-mobile-reader:focus {
+    border-color: var(--primary-green);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(30, 90, 60, 0.15);
+    color: #064e3b;
+}
+
+.btn-mobile-reader span {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: left;
+}
+
+.btn-mobile-reader strong {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #064e3b;
+}
+
+.btn-mobile-reader small {
+    font-size: 0.78rem;
+    color: #4B5563;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.btn-mobile-native i { color: #1E5A3C; }
+.btn-mobile-gdocs i { color: #3D54E6; }
+.btn-mobile-pdfjs i { color: #b45309; }
+
+/* Show mobile reader panel + hide iframe on phones */
+@media (max-width: 768px) {
+    .mobile-reader-panel {
+        display: block;
+    }
+    .publication-pdf-embed {
+        display: none;
+    }
+}
+
+/* Desktop full-reader button (hidden on mobile) */
+.desktop-fullreader {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .desktop-fullreader {
+        display: none;
+    }
+}
+
+/* ============================================
+   Crossref Impact Integration
+   ============================================ */
+
+.crossref-record-banner {
+    display: flex;
+    gap: 1.1rem;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border: 1px solid #1E5A3C;
+    border-left: 4px solid #1E5A3C;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    margin: 2rem 0 1rem;
+    box-shadow: 0 4px 16px rgba(30, 90, 60, 0.08);
+}
+
+.crossref-record-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(30, 90, 60, 0.1);
+}
+
+.crossref-record-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.crossref-record-content h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    color: #064e3b;
+    font-weight: 700;
+}
+
+.crossref-record-content p {
+    margin: 0 0 1rem;
+    font-size: 0.92rem;
+    color: #065f46;
+    line-height: 1.55;
+}
+
+.crossref-record-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.btn-crossref-doi,
+.btn-crossref-api,
+.btn-crossref-search {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    min-height: 36px;
+}
+
+.btn-crossref-doi {
+    background: var(--primary-green);
+    color: white;
+}
+
+.btn-crossref-doi:hover {
+    background: #14472e;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-crossref-api {
+    background: white;
+    color: #1E5A3C;
+    border: 1px solid #1E5A3C;
+}
+
+.btn-crossref-api:hover {
+    background: #f0fdf4;
+    color: #14472e;
+    transform: translateY(-1px);
+}
+
+.btn-crossref-search {
+    background: white;
+    color: #005f83;
+    border: 1px solid #005f83;
+}
+
+.btn-crossref-search:hover {
+    background: #ecfeff;
+    color: #003f57;
+    transform: translateY(-1px);
+}
+
+/* Crossref Indexed Widget in Sidebar */
+.crossref-indexed-widget {
+    background: white;
+    border: 1px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.crossref-indexed-header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-gray);
+    margin-bottom: 1rem;
+}
+
+.crossref-indexed-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+}
+
+.crossref-indexed-row {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.85rem;
+    color: #374151;
+    line-height: 1.4;
+}
+
+.crossref-indexed-row code {
+    background: #f1f5f9;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 0.78rem;
+    color: #005f83;
+}
+
+.crossref-indexed-link {
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #005f83;
+    text-decoration: none;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-gray);
+}
+
+.crossref-indexed-link:hover {
+    color: #003f57;
+}
+
+@media (max-width: 768px) {
+    .crossref-record-banner {
+        flex-direction: column;
+        padding: 1.25rem;
+    }
+    .crossref-record-actions {
+        flex-direction: column;
+    }
+    .btn-crossref-doi,
+    .btn-crossref-api,
+    .btn-crossref-search {
+        width: 100%;
+        justify-content: center;
     }
 }
 
