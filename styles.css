@@ -3051,9 +3051,9 @@ h4.team-subsection-title::after {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.7rem 1rem;
-    padding: 0.85rem 1.1rem;
-    margin: 0 0 1.6rem 0;
+    gap: 0.5rem 0.75rem;
+    padding: 0.55rem 0.85rem;
+    margin: 0 0 1.4rem 0;
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     border: 1px solid #bae6fd;
     border-left: 4px solid var(--primary-blue);
@@ -3109,7 +3109,7 @@ h4.team-subsection-title::after {
 
 .publication-doi-bar .doi-bar-divider {
     width: 1px;
-    height: 20px;
+    height: 16px;
     background: #cbd5e1;
     flex-shrink: 0;
 }
