@@ -1176,6 +1176,12 @@ h4.team-subsection-title::after {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    display: inline-block;
+    z-index: 2;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .status-coming-soon {
@@ -3387,6 +3393,7 @@ h4.team-subsection-title::after {
 }
 
 .affiliation-card {
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
