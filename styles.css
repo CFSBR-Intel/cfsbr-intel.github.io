@@ -3000,12 +3000,12 @@ h4.team-subsection-title::after {
 
 .publication-main h1 {
     font-family: 'Source Serif 4', 'Charter', 'Source Serif Pro', Georgia, serif;
-    font-size: 1.85rem;
+    font-size: 2.25rem;
     color: var(--primary-dark);
-    line-height: 1.28;
-    margin-bottom: 0.75rem;
+    line-height: 1.22;
+    margin-bottom: 1.1rem;
     font-weight: 700;
-    letter-spacing: -0.005em;
+    letter-spacing: -0.012em;
     word-break: break-word;
     hyphens: auto;
 }
@@ -3051,9 +3051,9 @@ h4.team-subsection-title::after {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.65rem 0.85rem;
-    padding: 0.7rem 1rem;
-    margin: 0 0 1.5rem 0;
+    gap: 0.7rem 1rem;
+    padding: 0.85rem 1.1rem;
+    margin: 0 0 1.6rem 0;
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     border: 1px solid #bae6fd;
     border-left: 4px solid var(--primary-blue);
@@ -3082,10 +3082,11 @@ h4.team-subsection-title::after {
 .publication-doi-bar .doi-bar-doi {
     color: var(--primary-blue);
     font-weight: 600;
-    padding: 0.2rem 0.55rem;
-    margin: -0.2rem -0.55rem;
+    padding: 0.25rem 0.6rem;
+    margin: -0.25rem -0.6rem;
     border-radius: 6px;
     transition: background 0.18s ease, color 0.18s ease;
+    cursor: pointer;
 }
 
 .publication-doi-bar .doi-bar-doi:hover {
@@ -3108,7 +3109,7 @@ h4.team-subsection-title::after {
 
 .publication-doi-bar .doi-bar-divider {
     width: 1px;
-    height: 16px;
+    height: 20px;
     background: #cbd5e1;
     flex-shrink: 0;
 }
@@ -3117,7 +3118,7 @@ h4.team-subsection-title::after {
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     color: #64748b;
 }
 
