@@ -3374,3 +3374,37 @@ h4.team-subsection-title::after {
     }
 }
 
+/* ============================================
+   Global Affiliations Grid (Crossref + C2PA)
+   ============================================ */
+
+.affiliations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.affiliation-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.affiliation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 900px) {
+    .affiliations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .affiliation-card {
+        padding: 1.75rem;
+    }
+}
+
