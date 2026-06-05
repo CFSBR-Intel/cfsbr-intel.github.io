@@ -3038,6 +3038,14 @@ h4.team-subsection-title::after {
     border-radius: 1px;
 }
 
+/* H1 title suffix — pure black for the "Strategic Proposal & Operational
+   Framework" part so it reads as a continuation of the same sentence but
+   has slightly stronger contrast than the dark-navy main title. */
+.publication-main h1 .title-suffix {
+    color: #000000;
+    font-weight: 700;
+}
+
 /* DOI + Publication Meta Bar — sits between H1 and H2 subtitle, before authors */
 .publication-doi-bar {
     display: flex;
