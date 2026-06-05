@@ -3000,12 +3000,42 @@ h4.team-subsection-title::after {
 
 .publication-main h1 {
     font-family: 'Source Serif 4', 'Charter', 'Source Serif Pro', Georgia, serif;
-    font-size: 2.5rem;
+    font-size: 1.85rem;
     color: var(--primary-dark);
-    line-height: 1.25;
+    line-height: 1.28;
     margin-bottom: 0.75rem;
     font-weight: 700;
     letter-spacing: -0.005em;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.publication-main h2.publication-subtitle {
+    display: none;
+}
+
+/* Small label that sits directly above the authors block */
+.authors-block-label {
+    display: block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #64748b;
+    margin: 0 0 0.65rem 0;
+    padding-left: 0.15rem;
+}
+
+.authors-block-label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 2px;
+    background: var(--primary-green);
+    vertical-align: middle;
+    margin-right: 0.55rem;
+    border-radius: 1px;
 }
 
 /* DOI + Publication Meta Bar — sits between H1 and H2 subtitle, before authors */
@@ -3149,18 +3179,6 @@ h4.team-subsection-title::after {
     .publication-doi-bar .doi-bar-label {
         min-width: 52px;
     }
-}
-
-.publication-main h2.publication-subtitle {
-    font-family: 'Source Serif 4', 'Charter', 'Source Serif Pro', Georgia, serif;
-    font-size: 1.4rem;
-    color: #1f2937;
-    font-weight: 500;
-    line-height: 1.4;
-    margin-bottom: 1.75rem;
-    margin-top: -0.75rem;
-    font-style: italic;
-    letter-spacing: 0;
 }
 
 .authors-block {
@@ -3673,21 +3691,16 @@ h4.team-subsection-title::after {
     }
 
     .publication-main h1 {
-        font-size: 2.1rem;
-    }
-
-    .publication-main h2.publication-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
+        line-height: 1.3;
     }
 }
 
 @media (max-width: 768px) {
     .publication-main h1 {
-        font-size: 1.75rem;
-    }
-
-    .publication-main h2.publication-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
+        line-height: 1.32;
+        letter-spacing: -0.003em;
     }
 
     .publication-cta-group {
@@ -3701,6 +3714,13 @@ h4.team-subsection-title::after {
 
     .publication-pdf-embed iframe {
         height: 520px;
+    }
+}
+
+@media (max-width: 420px) {
+    .publication-main h1 {
+        font-size: 1.22rem;
+        line-height: 1.34;
     }
 }
 
