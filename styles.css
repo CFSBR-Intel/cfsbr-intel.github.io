@@ -4652,3 +4652,102 @@ h4.team-subsection-title::after {
         flex-direction: column;
     }
 }
+
+/* === CFP page: layout repairs (ISSN pill, citation card, crossref banner) === */
+
+/* (a) ISSN-pending pill — subtle amber tint to signal "not yet assigned" */
+.cfp-meta-pill-pending {
+    background: #fffbeb;
+    border-color: #f59e0b;
+    color: #78350f;
+}
+
+.cfp-meta-pill-pending strong {
+    color: #b45309;
+}
+
+.cfp-meta-pill-pending i {
+    color: #b45309;
+}
+
+/* (b) Pending tag — inline badge used in the Series at a Glance list */
+.cfp-pending-tag {
+    display: inline-block;
+    background: #fef3c7;
+    color: #78350f;
+    border: 1px solid #f59e0b;
+    border-radius: 99px;
+    padding: 1px 10px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    vertical-align: 1px;
+    margin-left: 2px;
+}
+
+/* (c) Citation generator parent card — was previously unstyled */
+.citation-generator {
+    background: var(--white, #ffffff);
+    border: 1px solid var(--border-gray, #e5e7eb);
+    border-radius: 12px;
+    padding: 1.5rem 1.5rem 1.25rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.citation-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    color: var(--primary-dark, #0D3B66);
+    font-weight: 700;
+    margin: 0 0 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border-gray, #e5e7eb);
+}
+
+.citation-title svg {
+    color: var(--primary-green, #1E5A3C);
+}
+
+.citation-subtitle {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.55;
+    margin: 0 0 0.85rem;
+}
+
+/* Citation copy button — used in CFP sidebar (different from the WP-001 btn-citation-copy) */
+.citation-copy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    background: var(--primary-green, #1E5A3C);
+    color: #ffffff;
+    border: 1px solid var(--primary-green, #1E5A3C);
+    border-radius: 8px;
+    padding: 0.5rem 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 38px;
+}
+
+.citation-copy:hover {
+    background: #14472e;
+    border-color: #14472e;
+    transform: translateY(-1px);
+}
+
+/* Active tab override (CFP markup uses class="active" instead of WP-001 is-active) */
+.citation-tab.active {
+    background: #ffffff;
+    color: var(--primary-green, #1E5A3C);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* (d) Crossref banner — the CFP sidebar uses the WP-001 .crossref-record-content
+   wrapper class on the text column, so the existing styles apply directly. */
