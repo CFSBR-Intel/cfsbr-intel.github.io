@@ -118,27 +118,24 @@
 <header class="header">
     <div class="container">
         <div class="nav-wrapper">
-            <a href="https://cfsbr.gmrafi.com.bd/" class="logo">
-                <img src="../cfsbr-logo.png" alt="CFSBR Logo" class="logo-img">
+            <div class="logo">
+                <img src="../photos/cfsbrs.png" alt="CFSBR Logo" class="logo-image">
                 <div class="logo-text">
-                    <span class="logo-name">CFSBR</span>
-                    <span class="logo-subtitle">Centre for Financial Studies, Strategy & Bangladesh Research</span>
+                    <h1>CFSBR</h1>
+                    <p>Fintech &amp; Strategy</p>
                 </div>
-            </a>
-            <nav class="main-nav">
-                <a href="https://cfsbr.gmrafi.com.bd/">Home</a>
-                <a href="https://cfsbr.gmrafi.com.bd/about.html">About</a>
-                <a href="https://cfsbr.gmrafi.com.bd/objectives.html">Objectives</a>
-                <a href="https://cfsbr.gmrafi.com.bd/values.html">Values</a>
-                <a href="https://cfsbr.gmrafi.com.bd/wings.html">Wings</a>
-                <a href="https://cfsbr.gmrafi.com.bd/team.html">Team</a>
-                <a href="https://cfsbr.gmrafi.com.bd/publications.html" class="active">Intelligence</a>
-                <a href="https://cfsbr.gmrafi.com.bd/gallery.html">Gallery</a>
-                <a href="https://cfsbr.gmrafi.com.bd/activities.html">Activities</a>
+            </div>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../values.html" class="nav-link">Values</a>
+                <a href="../objectives.html" class="nav-link">Objectives</a>
+                <a href="../activities.html" class="nav-link">Focus Areas</a>
+                <a href="../publications.html" class="nav-link active">Intelligence</a>
+                <a href="../team.html" class="nav-link">Team</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
             </nav>
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
-                <i data-lucide="menu"></i>
-            </button>
+            <button class="btn-primary">Explore Solutions</button>
         </div>
     </div>
 </header>
@@ -186,9 +183,21 @@
                     <i data-lucide="clock" style="width:16px;height:16px;"></i>
                     <span><strong>ISSN</strong>Pending assignment</span>
                 </div>
+                <div class="cfp-meta-pill cfp-meta-pill-rolling" title="Submissions are accepted on a rolling basis throughout the year">
+                    <i data-lucide="refresh-cw" style="width:16px;height:16px;"></i>
+                    <span><strong>Intake</strong>Rolling basis · year-round</span>
+                </div>
                 <div class="cfp-meta-pill">
                     <i data-lucide="lock" style="width:16px;height:16px;"></i>
                     <span><strong>License</strong>CC BY 4.0 (default)</span>
+                </div>
+            </div>
+
+            <div class="cfp-rolling-banner" role="status" aria-label="Rolling submission window">
+                <i data-lucide="infinity" style="width:20px;height:20px;flex-shrink:0;"></i>
+                <div>
+                    <strong>Rolling Submission Window.</strong>
+                    <span>Submissions are accepted on a rolling basis throughout the year — the call remains open every day of the calendar year and is <em>not</em> tied to a fixed intake deadline.</span>
                 </div>
             </div>
 
@@ -332,7 +341,7 @@
                 <!-- Section 5 — Submission Workflow -->
                 <section class="pub-section">
                     <h2 class="pub-section-title"><span class="pub-section-number">05</span> Submission Workflow</h2>
-                    <p>Submissions follow a four-stage institutional workflow. Authors are notified of editorial decisions within <strong>15 business days</strong> at each stage.</p>
+                    <p>Submissions follow a four-stage institutional workflow. Because the call is open on a <strong>rolling basis throughout the year</strong>, you may submit at any time; manuscripts enter the review queue in the order they are received. Authors are notified of editorial decisions within <strong>15 business days</strong> at each stage.</p>
 
                     <div class="cfp-steps">
                         <div class="cfp-step">
@@ -399,7 +408,7 @@
                                 <i data-lucide="clock" style="width:18px;height:18px;color:#3D54E6;"></i>
                                 <div>
                                     <strong>Response Time</strong>
-                                    Editorial decision within 15 business days of receipt
+                                    Editorial decision within 15 business days of receipt · rolling year-round intake
                                 </div>
                             </div>
                         </div>
@@ -459,60 +468,103 @@
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
     <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
+        <div class="footer-content">
+            <div class="footer-col footer-col-logo">
                 <div class="footer-logo">
-                    <img src="../cfsbr-logo.png" alt="CFSBR Logo" class="logo-img">
-                    <div>
-                        <strong>CFSBR</strong>
-                        <p>Centre for Financial Studies, Strategy &amp; Bangladesh Research</p>
-                    </div>
+                    <img src="../photos/cfsbrs.png" alt="CFSBR Logo" class="footer-logo-img">
                 </div>
-                <p class="footer-tagline">An independent, interdisciplinary research and policy centre dedicated to advancing Bangladesh's financial-sector intelligence.</p>
+                <h3 class="footer-brand">CFSBR</h3>
+                <p class="footer-tagline">Research Centre</p>
+                <p class="footer-description">
+                    Centre for Fintech &amp; Strategic Business Research - Advancing inclusive finance innovation in Bangladesh &amp; beyond.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i data-lucide="twitter" style="width: 20px; height: 20px;"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i data-lucide="instagram" style="width: 20px; height: 20px;"></i>
+                    </a>
+                </div>
             </div>
+
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="https://cfsbr.gmrafi.com.bd/about.html">About CFSBR</a></li>
-                    <li><a href="https://cfsbr.gmrafi.com.bd/objectives.html">Objectives</a></li>
-                    <li><a href="https://cfsbr.gmrafi.com.bd/wings.html">Wings</a></li>
-                    <li><a href="https://cfsbr.gmrafi.com.bd/team.html">Team</a></li>
+                <ul class="footer-links">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#about">About Us</a></li>
+                    <li><a href="../index.html#values">Core Values</a></li>
+                    <li><a href="../index.html#activities">Activities</a></li>
+                    <li><a href="../publications.html">Publications</a></li>
+                    <li><a href="../gallery.html">Photo Gallery</a></li>
+                    <li><a href="../team.html">Our Team</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
-                <h4>Intelligence</h4>
-                <ul>
-                    <li><a href="https://cfsbr.gmrafi.com.bd/publications.html">Publications</a></li>
-                    <li><a href="./call-for-institutional-papers.html">Call for Papers</a></li>
-                    <li><a href="https://cfsbr.gmrafi.com.bd/gallery.html">Gallery</a></li>
-                    <li><a href="https://cfsbr.gmrafi.com.bd/activities.html">Activities</a></li>
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Research Guidelines</a></li>
+                    <li><a href="#">Publication Policy</a></li>
+                    <li><a href="#">Events Calendar</a></li>
+                    <li><a href="#">Join CFSBR</a></li>
+                    <li><a href="#">Student Portal</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="mailto:info.cfsbr@gmail.com"><i data-lucide="mail" style="width:14px;height:14px;"></i> info.cfsbr@gmail.com</a></li>
-                    <li><a href="https://cfsbr.gmrafi.com.bd/"><i data-lucide="globe" style="width:14px;height:14px;"></i> cfsbr.gmrafi.com.bd</a></li>
+                <h4>Contact Us</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i data-lucide="map-pin" style="width: 18px; height: 18px;"></i>
+                        <span>CFSBR Research Centre<br>Sylhet, Bangladesh</span>
+                    </li>
+                    <li>
+                        <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+                        <span>info.cfsbr@gmail.com</span>
+                    </li>
+                    <li>
+                        <i data-lucide="phone" style="width: 18px; height: 18px;"></i>
+                        <span>+880 1XXX-XXXXXX</span>
+                    </li>
                 </ul>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 CFSBR — Centre for Financial Studies, Strategy &amp; Bangladesh Research. All rights reserved.</p>
+            <p>&copy; 2025 CFSBR - Centre for Fintech &amp; Strategic Business Research. All rights reserved. | <a href="../copyright.html" style="color: white;">Copyright</a></p>
+            <p>Designed &amp; Developed by <strong class="developer-name">Md Golam Mubasshir Rafi</strong></p>
+            <p class="dmca-badge">
+                <a href="//www.dmca.com/Protection/Status.aspx?ID=9c64387c-65b8-48b4-84bb-35149866ffdd" title="DMCA.com Protection Status" class="dmca-badge">
+                    <img src="https://images.dmca.com/Badges/dmca-badge-w150-5x1-10.png?ID=9c64387c-65b8-48b4-84bb-35149866ffdd" alt="DMCA.com Protection Status" />
+                </a>
+            </p>
+            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <span style="font-size: 0.875rem; color: #cbd5e1;">Member of the</span>
+                <a href="https://c2pa.org/" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #cbd5e1;">
+                    <img src="../photos/c2pa_logo.svg" alt="C2PA" style="height: 24px; width: auto; filter: brightness(0) invert(1);">
+                    <span style="font-size: 0.875rem; font-weight: 500;">Coalition for Content Provenance and Authenticity</span>
+                </a>
+                <span style="color: #64748b;">|</span>
+                <a href="https://www.linuxfoundation.org/" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: #cbd5e1;">
+                    <img src="../photos/Linux_Foundation_logo_2013.svg.png" alt="Linux Foundation" style="height: 24px; width: auto; filter: brightness(0) invert(1);">
+                    <span style="font-size: 0.875rem; font-weight: 500;">Linux Foundation</span>
+                </a>
+            </div>
         </div>
     </div>
 </footer>
 
 <script>
     // Lucide icons
-    if (window.lucide && window.lucide.createIcons) {
-        window.lucide.createIcons();
-    }
+    lucide.createIcons();
 
     // Citation tabs
     document.querySelectorAll('.citation-tab').forEach(tab => {
@@ -549,12 +601,7 @@
         });
     });
 
-    // Mobile menu
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-    if (mobileToggle && mainNav) {
-        mobileToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
-    }
+    // Mobile menu toggle (no-op; canonical header has no toggle button)
 </script>
 
 <!--

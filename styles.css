@@ -4684,6 +4684,49 @@ h4.team-subsection-title::after {
     margin-left: 2px;
 }
 
+/* (b.2) Rolling-basis pill — green tint to signal "open year-round" */
+.cfp-meta-pill-rolling {
+    background: #ecfdf5;
+    border-color: #10b981;
+    color: #065f46;
+}
+
+.cfp-meta-pill-rolling strong {
+    color: #047857;
+}
+
+.cfp-meta-pill-rolling i {
+    color: #047857;
+}
+
+/* (b.3) Rolling Submission Window banner — full-width callout under hero */
+.cfp-rolling-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border: 1px solid #10b981;
+    border-left: 4px solid #059669;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin: 0 0 1.5rem;
+    color: #064e3b;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.08);
+}
+
+.cfp-rolling-banner i[data-lucide] {
+    color: #047857;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.cfp-rolling-banner strong {
+    color: #064e3b;
+    font-weight: 700;
+}
+
 /* (c) Citation generator parent card — was previously unstyled */
 .citation-generator {
     background: var(--white, #ffffff);
