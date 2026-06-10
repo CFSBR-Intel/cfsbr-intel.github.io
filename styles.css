@@ -4242,12 +4242,12 @@ h4.team-subsection-title::after {
    ===================================================== */
 
 .cfp-hero {
-    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #ddd6fe 100%);
-    border: 1px solid #7c3aed;
+    background: linear-gradient(135deg, #fafaf5 0%, #f3f0e6 50%, #e7d4a0 100%);
+    border: 1px solid #0F2A47;
     border-radius: 16px;
     padding: 3rem 2.75rem;
     margin-bottom: 3rem;
-    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.10);
+    box-shadow: 0 10px 30px rgba(15, 42, 71, 0.10);
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -4264,7 +4264,7 @@ h4.team-subsection-title::after {
     font-family: 'Source Serif 4', 'Playfair Display', Georgia, serif;
     font-size: 3rem;
     font-weight: 700;
-    color: #1e1b4b;
+    color: #0F2A47;
     margin: 0;
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -4272,7 +4272,7 @@ h4.team-subsection-title::after {
 
 .cfp-hero-tagline {
     font-size: 1.15rem;
-    color: #374151;
+    color: #334155;
     line-height: 1.6;
     margin: 0;
     max-width: 60rem;
@@ -4290,25 +4290,25 @@ h4.team-subsection-title::after {
     align-items: center;
     gap: 8px;
     background: white;
-    border: 1px solid #c4b5fd;
+    border: 1px solid #e7d4a0;
     border-radius: 99px;
     padding: 6px 14px;
     font-size: 0.85rem;
-    color: #1e1b4b;
-    box-shadow: 0 1px 3px rgba(124, 58, 237, 0.06);
+    color: #0F2A47;
+    box-shadow: 0 1px 3px rgba(15, 42, 71, 0.06);
 }
 
 .cfp-meta-pill strong {
-    color: #7c3aed;
+    color: #C9A24A;
     margin-right: 4px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .cfp-doi-format {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #1e1b4b;
+    background: #0F2A47;
     color: white;
     border-radius: 10px;
     padding: 10px 16px;
@@ -4319,7 +4319,7 @@ h4.team-subsection-title::after {
 
 .cfp-doi-format code {
     background: rgba(255, 255, 255, 0.12);
-    color: #fde68a;
+    color: #e7d4a0;
     padding: 2px 8px;
     border-radius: 4px;
     font-family: 'JetBrains Mono', monospace;
@@ -4347,14 +4347,14 @@ h4.team-subsection-title::after {
     border: 1px solid #e5e7eb;
     border-radius: 14px;
     padding: 1.5rem;
-    box-shadow: 0 1px 4px rgba(61, 84, 230, 0.06);
+    box-shadow: 0 1px 4px rgba(15, 42, 71, 0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .cfp-track-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(61, 84, 230, 0.12);
-    border-color: #c4b5fd;
+    box-shadow: 0 10px 30px rgba(15, 42, 71, 0.12);
+    border-color: #e7d4a0;
 }
 
 .cfp-track-icon {
@@ -4396,8 +4396,8 @@ h4.team-subsection-title::after {
 
 .cfp-eligibility-list li {
     counter-increment: eligibility;
-    background: #f9fafb;
-    border-left: 3px solid #7c3aed;
+    background: #fafaf5;
+    border-left: 3px solid #0F2A47;
     padding: 12px 16px 12px 44px;
     border-radius: 8px;
     color: #1f2937;
@@ -4413,8 +4413,8 @@ h4.team-subsection-title::after {
     top: 12px;
     width: 22px;
     height: 22px;
-    background: #7c3aed;
-    color: white;
+    background: #0F2A47;
+    color: #e7d4a0;
     border-radius: 50%;
     font-weight: 700;
     font-size: 0.78rem;
@@ -4424,7 +4424,7 @@ h4.team-subsection-title::after {
 }
 
 .cfp-eligibility-list li strong {
-    color: #1e1b4b;
+    color: #0F2A47;
 }
 
 /* Policy callout */
@@ -4432,13 +4432,13 @@ h4.team-subsection-title::after {
 .cfp-policy-callout {
     display: flex;
     gap: 1rem;
-    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    background: linear-gradient(135deg, #0F2A47 0%, #1e3a5f 100%);
     color: white;
     border-radius: 14px;
     padding: 1.5rem;
     margin: 1rem 0 1.5rem;
     align-items: flex-start;
-    box-shadow: 0 10px 30px rgba(30, 27, 75, 0.18);
+    box-shadow: 0 10px 30px rgba(15, 42, 71, 0.18);
 }
 
 .cfp-policy-callout-icon {
@@ -4461,13 +4461,13 @@ h4.team-subsection-title::after {
 
 .cfp-policy-callout p {
     margin: 0;
-    color: #e0e7ff;
+    color: #d4dbe3;
     line-height: 1.6;
     font-size: 0.97rem;
 }
 
 .cfp-policy-callout strong {
-    color: #fde68a;
+    color: #e7d4a0;
 }
 
 /* Policy list */
@@ -4485,8 +4485,8 @@ h4.team-subsection-title::after {
     display: flex;
     gap: 12px;
     align-items: flex-start;
-    background: #f0f9ff;
-    border: 1px solid #bae6fd;
+    background: #fafaf5;
+    border: 1px solid #e7d4a0;
     border-radius: 10px;
     padding: 14px 16px;
     color: #0f172a;
@@ -4500,7 +4500,7 @@ h4.team-subsection-title::after {
 }
 
 .cfp-policy-list li strong {
-    color: #0D3B66;
+    color: #0F2A47;
 }
 
 /* Steps */
@@ -4521,7 +4521,7 @@ h4.team-subsection-title::after {
     border: 1px solid #e5e7eb;
     border-radius: 14px;
     padding: 1.25rem 1.5rem;
-    box-shadow: 0 1px 4px rgba(61, 84, 230, 0.06);
+    box-shadow: 0 1px 4px rgba(15, 42, 71, 0.06);
     position: relative;
 }
 
@@ -4530,21 +4530,21 @@ h4.team-subsection-title::after {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
-    color: white;
+    background: linear-gradient(135deg, #0F2A47 0%, #1e3a5f 100%);
+    color: #e7d4a0;
     font-weight: 700;
     font-size: 1.15rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+    box-shadow: 0 4px 12px rgba(15, 42, 71, 0.25);
 }
 
 .cfp-step-body h4 {
     font-family: 'Source Serif 4', Georgia, serif;
     font-size: 1.15rem;
     margin: 0 0 0.4rem 0;
-    color: #1e1b4b;
+    color: #0F2A47;
 }
 
 .cfp-step-body p {
@@ -4557,15 +4557,15 @@ h4.team-subsection-title::after {
 /* Submit block */
 
 .cfp-submit-block {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    border: 1px solid #3D54E6;
+    background: linear-gradient(135deg, #fafaf5 0%, #f3f0e6 100%);
+    border: 1px solid #0F2A47;
     border-radius: 16px;
     padding: 2rem;
     margin-top: 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    box-shadow: 0 10px 30px rgba(61, 84, 230, 0.10);
+    box-shadow: 0 10px 30px rgba(15, 42, 71, 0.10);
 }
 
 .cfp-submit-cta {
@@ -4579,7 +4579,7 @@ h4.team-subsection-title::after {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid #bfdbfe;
+    border-top: 1px solid #e7d4a0;
 }
 
 .cfp-submit-meta-item {
@@ -4598,7 +4598,7 @@ h4.team-subsection-title::after {
 
 .cfp-submit-meta-item strong {
     display: block;
-    color: #0D3B66;
+    color: #0F2A47;
     margin-bottom: 2px;
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -4606,9 +4606,10 @@ h4.team-subsection-title::after {
 }
 
 .cfp-submit-meta-item a {
-    color: #3D54E6;
+    color: #0F2A47;
     text-decoration: none;
     font-weight: 500;
+    border-bottom: 1px dotted #C9A24A;
 }
 
 .cfp-submit-meta-item a:hover {
@@ -4684,19 +4685,19 @@ h4.team-subsection-title::after {
     margin-left: 2px;
 }
 
-/* (b.2) Rolling-basis pill — green tint to signal "open year-round" */
+/* (b.2) Rolling-basis pill — teal tint to signal "open year-round" */
 .cfp-meta-pill-rolling {
-    background: #ecfdf5;
-    border-color: #10b981;
-    color: #065f46;
+    background: #ecfeff;
+    border-color: #0E7490;
+    color: #0E7490;
 }
 
 .cfp-meta-pill-rolling strong {
-    color: #047857;
+    color: #0E7490;
 }
 
 .cfp-meta-pill-rolling i {
-    color: #047857;
+    color: #0E7490;
 }
 
 /* (b.3) Rolling Submission Window banner — full-width callout under hero */
@@ -4704,26 +4705,26 @@ h4.team-subsection-title::after {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-    border: 1px solid #10b981;
-    border-left: 4px solid #059669;
+    background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+    border: 1px solid #0E7490;
+    border-left: 4px solid #155e75;
     border-radius: 10px;
     padding: 1rem 1.25rem;
     margin: 0 0 1.5rem;
-    color: #064e3b;
+    color: #155e75;
     font-size: 0.95rem;
     line-height: 1.55;
-    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.08);
+    box-shadow: 0 4px 14px rgba(14, 116, 144, 0.08);
 }
 
 .cfp-rolling-banner i[data-lucide] {
-    color: #047857;
+    color: #0E7490;
     flex-shrink: 0;
     margin-top: 2px;
 }
 
 .cfp-rolling-banner strong {
-    color: #064e3b;
+    color: #155e75;
     font-weight: 700;
 }
 
@@ -4794,3 +4795,36 @@ h4.team-subsection-title::after {
 
 /* (d) Crossref banner — the CFP sidebar uses the WP-001 .crossref-record-content
    wrapper class on the text column, so the existing styles apply directly. */
+/* (e) Local palette overrides for citation + side cards on the CFP page.
+   These re-skin the shared .citation-* components to match the editorial
+   slate palette (navy + gold + ivory) used elsewhere on this page, while
+   leaving the global .primary-dark / .primary-green brand colors intact
+   for the rest of the site. */
+.citation-generator .citation-title {
+    color: #0F2A47;
+    border-bottom-color: #e7d4a0;
+}
+
+.citation-generator .citation-title svg {
+    color: #C9A24A;
+}
+
+.citation-generator .citation-copy {
+    background: #0F2A47;
+    border-color: #0F2A47;
+    color: #fafaf5;
+}
+
+.citation-generator .citation-copy:hover {
+    background: #1e3a5f;
+    border-color: #1e3a5f;
+}
+
+.citation-generator .citation-tab.active {
+    color: #0F2A47;
+    border-bottom-color: #C9A24A;
+}
+
+.citation-generator .citation-tab {
+    color: #475569;
+}
