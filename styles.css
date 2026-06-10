@@ -4235,3 +4235,420 @@ h4.team-subsection-title::after {
         width: 100%;
     }
 }
+
+/* =====================================================
+   CFSBR Call for Papers page
+   File: publications/call-for-institutional-papers.html
+   ===================================================== */
+
+.cfp-hero {
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #ddd6fe 100%);
+    border: 1px solid #7c3aed;
+    border-radius: 16px;
+    padding: 3rem 2.75rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.cfp-hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.cfp-hero-title {
+    font-family: 'Source Serif 4', 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.cfp-hero-tagline {
+    font-size: 1.15rem;
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 60rem;
+}
+
+.cfp-meta-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.cfp-meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid #c4b5fd;
+    border-radius: 99px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    color: #1e1b4b;
+    box-shadow: 0 1px 3px rgba(124, 58, 237, 0.06);
+}
+
+.cfp-meta-pill strong {
+    color: #7c3aed;
+    margin-right: 4px;
+    font-weight: 600;
+}
+
+.cfp-doi-format {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1e1b4b;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.cfp-doi-format code {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fde68a;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+}
+
+.cfp-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+/* Tracks grid */
+
+.cfp-tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.cfp-track-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px rgba(61, 84, 230, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.cfp-track-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(61, 84, 230, 0.12);
+    border-color: #c4b5fd;
+}
+
+.cfp-track-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.9rem;
+}
+
+.cfp-track-card h4 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.15rem;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+}
+
+.cfp-track-card p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Eligibility list */
+
+.cfp-eligibility-list {
+    list-style: none;
+    counter-reset: eligibility;
+    padding: 0;
+    margin: 1rem 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.cfp-eligibility-list li {
+    counter-increment: eligibility;
+    background: #f9fafb;
+    border-left: 3px solid #7c3aed;
+    padding: 12px 16px 12px 44px;
+    border-radius: 8px;
+    color: #1f2937;
+    font-size: 0.97rem;
+    line-height: 1.55;
+    position: relative;
+}
+
+.cfp-eligibility-list li::before {
+    content: counter(eligibility);
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    width: 22px;
+    height: 22px;
+    background: #7c3aed;
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.78rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cfp-eligibility-list li strong {
+    color: #1e1b4b;
+}
+
+/* Policy callout */
+
+.cfp-policy-callout {
+    display: flex;
+    gap: 1rem;
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    color: white;
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin: 1rem 0 1.5rem;
+    align-items: flex-start;
+    box-shadow: 0 10px 30px rgba(30, 27, 75, 0.18);
+}
+
+.cfp-policy-callout-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cfp-policy-callout h4 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.2rem;
+    margin: 0 0 0.4rem 0;
+    color: white;
+}
+
+.cfp-policy-callout p {
+    margin: 0;
+    color: #e0e7ff;
+    line-height: 1.6;
+    font-size: 0.97rem;
+}
+
+.cfp-policy-callout strong {
+    color: #fde68a;
+}
+
+/* Policy list */
+
+.cfp-policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cfp-policy-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: #0f172a;
+    font-size: 0.97rem;
+    line-height: 1.6;
+}
+
+.cfp-policy-list li > i {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.cfp-policy-list li strong {
+    color: #0D3B66;
+}
+
+/* Steps */
+
+.cfp-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.25rem 0 0.5rem;
+    counter-reset: cfpstep;
+}
+
+.cfp-step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(61, 84, 230, 0.06);
+    position: relative;
+}
+
+.cfp-step-num {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+}
+
+.cfp-step-body h4 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.15rem;
+    margin: 0 0 0.4rem 0;
+    color: #1e1b4b;
+}
+
+.cfp-step-body p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.97rem;
+}
+
+/* Submit block */
+
+.cfp-submit-block {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 1px solid #3D54E6;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(61, 84, 230, 0.10);
+}
+
+.cfp-submit-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.cfp-submit-meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #bfdbfe;
+}
+
+.cfp-submit-meta-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.92rem;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+.cfp-submit-meta-item i {
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.cfp-submit-meta-item strong {
+    display: block;
+    color: #0D3B66;
+    margin-bottom: 2px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.cfp-submit-meta-item a {
+    color: #3D54E6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cfp-submit-meta-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .cfp-tracks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cfp-submit-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .cfp-hero {
+        padding: 2.25rem 1.5rem;
+    }
+
+    .cfp-hero-title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cfp-hero-title {
+        font-size: 1.85rem;
+    }
+
+    .cfp-hero-tagline {
+        font-size: 1rem;
+    }
+
+    .cfp-policy-callout {
+        flex-direction: column;
+    }
+
+    .cfp-step {
+        flex-direction: column;
+    }
+}

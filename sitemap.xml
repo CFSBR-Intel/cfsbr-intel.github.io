@@ -43,7 +43,15 @@
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
-    
+
+    <!-- Publications: Call for Papers — Institutional White Paper Series -->
+    <url>
+        <loc>https://cfsbr-intel.github.io/publications/call-for-institutional-papers</loc>
+        <lastmod>2026-06-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- About Section -->
     <url>
         <loc>https://cfsbr.gmrafi.com.bd/#about</loc>
