@@ -7,6 +7,7 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://cfsbr.gmrafi.com.bd/sitemap.xml
+Sitemap: https://cfsbr-intel.github.io/sitemap.xml
 
 # Crawl delay (optional, in seconds)
 Crawl-delay: 1
