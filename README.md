@@ -177,3 +177,26 @@ This project is private and proprietary. Unauthorized copying, distribution, or 
   <strong>Building the future of inclusive finance for emerging markets 🚀</strong>
 </div>](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # cfsbr
+
+## 🌐 Production Domains and Hosting
+
+CFSBR is served from three co-primary domains that all point to the same static build of this repository:
+
+| Domain | Role | Host |
+|---|---|---|
+| `cfsbr.com` | Global English brand (canonical short address) | Vercel |
+| `www.cfsbr.com` | Brand www alias | Vercel |
+| `cfsbr.gmrafi.com.bd` | Bangladesh/regional imprint | Vercel |
+| `cfsbr-intel.github.io` | Open-science DOI resolve target (article landing pages) | GitHub Pages |
+
+### Vercel project setup (for `cfsbr.com`)
+
+1. In the Vercel dashboard, import the repo (`gmrafi/cfsbr`) as a new project.
+2. Framework preset: **Other** (static site, no build step).
+3. Output directory: `.` (project root).
+4. **Production domains** (Project Settings → Domains):
+   - `cfsbr.com`
+   - `www.cfsbr.com` (alias, redirect to `cfsbr.com`)
+   - `cfsbr.gmrafi.com.bd` (existing)
+5. `vercel.json` in this repo enables `cleanUrls`, disables `trailingSlash`, and sets sensible cache and security headers.
+6. The `CNAME` file in the repo root (`cfsbr.js.org`) is **only** consumed by GitHub Pages and does not affect Vercel — leave it as-is.
