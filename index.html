@@ -247,8 +247,302 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CFSBR Custom Icon Sprite (primary) -->
+    <!-- Inline include so <use href="#ic-..."> works without extra fetches -->
+    <!-- Inline CFSBR icon sprite — <use href="#ic-..."/> resolves directly -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+<use href="#ic-target"/></svg>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <defs>
+
+    <!-- ============================== MONOGRAM ============================== -->
+    <!-- CFSBR mark: stacked "C" arcs enclosing a network node grid.
+         64x64 base, used in hero, favicon-able. -->
+    <symbol id="ic-mark" viewBox="0 0 64 64">
+      <!-- Outer C arc -->
+      <path d="M52 18 A22 22 0 1 0 52 46"
+            fill="none" stroke="currentColor" stroke-width="4"
+            stroke-linecap="round"/>
+      <!-- Inner C arc -->
+      <path d="M44 24 A14 14 0 1 0 44 40"
+            fill="none" stroke="currentColor" stroke-width="3"
+            stroke-linecap="round" opacity="0.55"/>
+      <!-- Network node grid inside the C -->
+      <circle cx="22" cy="22" r="2.4" fill="currentColor"/>
+      <circle cx="32" cy="20" r="2.4" fill="currentColor"/>
+      <circle cx="42" cy="22" r="2.4" fill="currentColor"/>
+      <circle cx="22" cy="32" r="2.4" fill="currentColor"/>
+      <circle cx="32" cy="32" r="3.2" fill="currentColor"/>
+      <circle cx="42" cy="32" r="2.4" fill="currentColor"/>
+      <circle cx="22" cy="42" r="2.4" fill="currentColor"/>
+      <circle cx="32" cy="44" r="2.4" fill="currentColor"/>
+      <circle cx="42" cy="42" r="2.4" fill="currentColor"/>
+      <!-- Connector lines (faint) -->
+      <g stroke="currentColor" stroke-width="0.8" opacity="0.35">
+        <line x1="22" y1="22" x2="32" y2="20"/>
+        <line x1="32" y1="20" x2="42" y2="22"/>
+        <line x1="22" y1="22" x2="22" y2="32"/>
+        <line x1="32" y1="20" x2="32" y2="32"/>
+        <line x1="42" y1="22" x2="42" y2="32"/>
+        <line x1="22" y1="32" x2="32" y2="32"/>
+        <line x1="32" y1="32" x2="42" y2="32"/>
+        <line x1="22" y1="32" x2="22" y2="42"/>
+        <line x1="32" y1="32" x2="32" y2="44"/>
+        <line x1="42" y1="32" x2="42" y2="42"/>
+        <line x1="22" y1="42" x2="32" y2="44"/>
+        <line x1="32" y1="44" x2="42" y2="42"/>
+      </g>
+    </symbol>
+
+    <!-- ============================== BRAND PILLARS ============================== -->
+    <!-- Target / Mission: concentric ring with centre dot -->
+    <symbol id="ic-target" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="2.2" fill="currentColor"/>
+    </symbol>
+
+    <!-- Vision: telescope/eye hybrid (focused gaze) -->
+    <symbol id="ic-vision" viewBox="0 0 24 24">
+      <path d="M2 12 C5 5, 9 3, 12 3 C15 3, 19 5, 22 12 C19 19, 15 21, 12 21 C9 21, 5 19, 2 12 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="1" fill="currentColor"/>
+    </symbol>
+
+    <!-- Intelligence (book + circuit) -->
+    <symbol id="ic-intelligence" viewBox="0 0 24 24">
+      <path d="M4 5 C7 4, 10 5, 12 6 C14 5, 17 4, 20 5 L20 18 C17 17, 14 18, 12 19 C10 18, 7 17, 4 18 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="12" y1="6" x2="12" y2="19" stroke="currentColor" stroke-width="2"/>
+      <circle cx="8" cy="9" r="0.9" fill="currentColor"/>
+      <circle cx="16" cy="9" r="0.9" fill="currentColor"/>
+      <line x1="8" y1="12" x2="11" y2="12" stroke="currentColor" stroke-width="1.4"/>
+      <line x1="13" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+
+    <!-- Data: stacked disc / database stack -->
+    <symbol id="ic-data" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5" rx="8" ry="2.6" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M4 5 V12 C4 13.4, 7.6 14.6, 12 14.6 C16.4 14.6, 20 13.4, 20 12 V5"
+            fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M4 12 V19 C4 20.4, 7.6 21.6, 12 21.6 C16.4 21.6, 20 20.4, 20 19 V12"
+            fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+
+    <!-- Network (for "expansion / wings") -->
+    <symbol id="ic-network" viewBox="0 0 24 24">
+      <circle cx="12" cy="4" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="4" cy="20" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="20" cy="20" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="13" r="2.6" fill="currentColor"/>
+      <line x1="12" y1="6.2" x2="12" y2="10.4" stroke="currentColor" stroke-width="2"/>
+      <line x1="5.6" y1="18.4" x2="10.2" y2="14.6" stroke="currentColor" stroke-width="2"/>
+      <line x1="18.4" y1="18.4" x2="13.8" y2="14.6" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+
+    <!-- Shield with checkmark (security) -->
+    <symbol id="ic-shield-check" viewBox="0 0 24 24">
+      <path d="M12 3 L20 6 V12 C20 17, 16 20.5, 12 21.5 C8 20.5, 4 17, 4 12 V6 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M8.5 12 L11 14.5 L15.5 9.5" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- ============================== FOCUS AREA ICONS ============================== -->
+    <!-- Fintech / Mobile payments (hand + phone with wave) -->
+    <symbol id="ic-fintech" viewBox="0 0 24 24">
+      <rect x="6" y="2" width="12" height="20" rx="2.2"
+            fill="none" stroke="currentColor" stroke-width="2"/>
+      <line x1="6" y1="6" x2="18" y2="6" stroke="currentColor" stroke-width="2"/>
+      <line x1="6" y1="18" x2="18" y2="18" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="20" r="0.6" fill="currentColor"/>
+      <!-- payment wave inside screen -->
+      <path d="M8.5 11 C9.5 10, 10.5 12, 12 11 C13.5 10, 14.5 12, 15.5 11"
+            fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M8.5 14 C9.5 13, 10.5 15, 12 14 C13.5 13, 14.5 15, 15.5 14"
+            fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+    </symbol>
+
+    <!-- Strategy / Chess knight head (sleek) -->
+    <symbol id="ic-strategy" viewBox="0 0 24 24">
+      <path d="M18 6 C18 4.5, 16.5 3, 15 3 C13.5 3, 12 4, 12 5.5 C12 7, 13 8, 12 9
+               C10 10.5, 7 11, 5 14 C3.4 16.4, 3 19, 4 21 L20 21 C21 19, 20.5 16, 19 14
+               C18 12.5, 18 11, 18 9 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="15" cy="6" r="0.8" fill="currentColor"/>
+    </symbol>
+
+    <!-- Policy / Scales -->
+    <symbol id="ic-policy" viewBox="0 0 24 24">
+      <line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+      <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2"/>
+      <path d="M4 6 L2 12 C2 13.5, 3.5 14.5, 5 14.5 C6.5 14.5, 8 13.5, 8 12 L6 6"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M20 6 L18 12 C18 13.5, 19.5 14.5, 21 14.5 C22.5 14.5, 24 13.5, 24 12 L22 6"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+            transform="translate(-2,0)"/>
+      <line x1="9" y1="21" x2="15" y2="21" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+
+    <!-- Research / Beaker -->
+    <symbol id="ic-research" viewBox="0 0 24 24">
+      <path d="M9 3 H15 M10 3 V9 L5 19 C4.5 20.4, 5.6 21.5, 7 21.5 H17
+               C18.4 21.5, 19.5 20.4, 19 19 L14 9 V3"
+            fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.6" opacity="0.7"/>
+      <circle cx="9.5" cy="17.5" r="0.7" fill="currentColor"/>
+      <circle cx="13" cy="18.5" r="0.7" fill="currentColor" opacity="0.7"/>
+    </symbol>
+
+    <!-- Inclusion / Hand with people -->
+    <symbol id="ic-inclusion" viewBox="0 0 24 24">
+      <circle cx="8" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="16" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M3 16 C3 13.5, 5 12, 8 12 C9.5 12, 10.5 12.5, 12 13.5
+               C13.5 12.5, 14.5 12, 16 12 C19 12, 21 13.5, 21 16 V20 H3 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Education / Graduation cap -->
+    <symbol id="ic-education" viewBox="0 0 24 24">
+      <path d="M2 9 L12 5 L22 9 L12 13 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M6 11 V16 C6 17.5, 8.5 18.5, 12 18.5 C15.5 18.5, 18 17.5, 18 16 V11"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="20" y1="9.5" x2="20" y2="15" stroke="currentColor" stroke-width="2"/>
+      <circle cx="20" cy="16" r="0.8" fill="currentColor"/>
+    </symbol>
+
+    <!-- Incubation / Rocket (custom geometric) -->
+    <symbol id="ic-rocket" viewBox="0 0 24 24">
+      <path d="M12 2 C15 5, 17 9, 17 13 V19 H7 V13 C7 9, 9 5, 12 2 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="12" cy="11" r="1.8" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M7 14 L4 17 V20 L7 19 M17 14 L20 17 V20 L17 19"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M10 19 L9 22 M12 19 L12 22 M14 19 L15 22"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    </symbol>
+
+    <!-- Consulting / Handshake (two interlocking shapes) -->
+    <symbol id="ic-handshake" viewBox="0 0 24 24">
+      <path d="M2 12 L6 8 L9 9 L11 7 L13 7 L15 9 L18 8 L22 12 L18 16 L15 15
+               L13 17 L11 17 L9 15 L6 16 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="11" y1="12" x2="13" y2="12" stroke="currentColor" stroke-width="1.6" opacity="0.6"/>
+    </symbol>
+
+    <!-- ============================== CONTENT SECTION ICONS ============================== -->
+    <!-- White paper / Document stack (research publication) -->
+    <symbol id="ic-paper" viewBox="0 0 24 24">
+      <path d="M6 3 H14 L18 7 V21 H6 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M14 3 V7 H18" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="9" y1="11" x2="15" y2="11" stroke="currentColor" stroke-width="1.6"/>
+      <line x1="9" y1="14" x2="15" y2="14" stroke="currentColor" stroke-width="1.6"/>
+      <line x1="9" y1="17" x2="13" y2="17" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+
+    <!-- Megaphone (call for papers) -->
+    <symbol id="ic-megaphone" viewBox="0 0 24 24">
+      <path d="M3 10 V14 L11 14 L19 18 V6 L11 10 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M11 14 V18 C11 19.5, 12 20, 13 19.5"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="19" y1="9" x2="22" y2="9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="19" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="19" y1="15" x2="22" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Insights / Lightbulb (custom geometric) -->
+    <symbol id="ic-lightbulb" viewBox="0 0 24 24">
+      <path d="M12 3 C8 3, 5 6, 5 10 C5 12.5, 6.5 14.5, 8 15.5 V18 H16 V15.5
+               C17.5 14.5, 19 12.5, 19 10 C19 6, 16 3, 12 3 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="9" y1="20" x2="15" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="10" y1="22" x2="14" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Award / Ribbon rosette -->
+    <symbol id="ic-award" viewBox="0 0 24 24">
+      <circle cx="12" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="9" r="2.4" fill="currentColor"/>
+      <path d="M8 14 L6 22 L9 20 L12 22 L15 20 L18 22 L16 14"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Infinity (continuous research) -->
+    <symbol id="ic-infinity" viewBox="0 0 24 24">
+      <path d="M3 12 C3 9, 6 7, 9 10 L15 14 C18 17, 21 15, 21 12 C21 9, 18 7, 15 10 L9 14 C6 17, 3 15, 3 12 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Infinity with rolling arrow (rolling call) -->
+    <symbol id="ic-rolling" viewBox="0 0 24 24">
+      <path d="M3 12 C3 9, 6 7, 9 10 L15 14 C18 17, 21 15, 21 12 C21 9, 18 7, 15 10 L9 14 C6 17, 3 15, 3 12 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M19 4 L21.5 6.5 L19 9" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="21.5" y1="6.5" x2="16" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- ============================== SECTION DIVIDER ============================== -->
+    <!-- Geometric SVG divider: layered chevron stripes -->
+    <symbol id="ic-divider" viewBox="0 0 120 12" preserveAspectRatio="none">
+      <line x1="0" y1="6" x2="48" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M54 2 L60 6 L54 10" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="66" cy="6" r="2" fill="currentColor"/>
+      <path d="M72 2 L66 6 L72 10" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="78" y1="6" x2="120" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- ============================== WINGS ============================== -->
+    <symbol id="ic-wing-research" viewBox="0 0 24 24">
+      <!-- Compass-rose meets research -->
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 4 L14 12 L12 20 L10 12 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M4 12 L12 10 L20 12 L12 14 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="12" cy="12" r="1.4" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="ic-wing-intelligence" viewBox="0 0 24 24">
+      <!-- Eye + horizon -->
+      <path d="M2 12 C5 6, 9 4, 12 4 C15 4, 19 6, 22 12 C19 18, 15 20, 12 20 C9 20, 5 18, 2 12 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="ic-wing-consultancy" viewBox="0 0 24 24">
+      <!-- Speech bubble + chart -->
+      <path d="M4 5 H20 V16 H10 L6 20 V16 H4 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="7" y1="13" x2="7" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="11" y1="13" x2="11" y2="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="15" y1="13" x2="15" y2="11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="ic-wing-publication" viewBox="0 0 24 24">
+      <!-- Open book -->
+      <path d="M3 6 C6 5, 9 5, 12 6 C15 5, 18 5, 21 6 V18 C18 17, 15 17, 12 18 C9 17, 6 17, 3 18 Z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="12" y1="6" x2="12" y2="18" stroke="currentColor" stroke-width="2"/>
+      <line x1="6" y1="9" x2="10" y2="9" stroke="currentColor" stroke-width="1.4"/>
+      <line x1="14" y1="9" x2="18" y2="9" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+
+  </defs>
+
+</svg>
+
+    <!-- Lucide Icons (utility only: arrows, mail, phone, social) -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     
 
 </head>
@@ -315,7 +609,7 @@
                 <div class="hero-right">
                     <div class="mission-card">
                         <div class="card-icon" style="background: #e8f5e9;">
-                            <i data-lucide="target" style="width: 36px; height: 36px; color: #1e5a3c;"></i>
+                            <svg class="cfsbr-icon tone-green" style="width: 36px; height: 36px;" aria-hidden="true"><use href="#ic-target"/></svg>
                         </div>
                         <div class="card-content">
                             <h4>Our Mission</h4>
@@ -324,7 +618,7 @@
                     </div>
                     <div class="vision-card">
                         <div class="card-icon" style="background: #fff9e6;">
-                            <i data-lucide="lightbulb" style="width: 36px; height: 36px; color: #f59e0b;"></i>
+                            <svg class="cfsbr-icon tone-orange" style="width: 36px; height: 36px;" aria-hidden="true"><use href="#ic-vision"/></svg>
                         </div>
                         <div class="card-content">
                             <h4>Our Vision</h4>
@@ -346,28 +640,28 @@
             <div class="about-grid">
                 <div class="about-card">
                     <div class="about-icon">
-                        <i data-lucide="book-open" style="width: 32px; height: 32px; color: #3D54E6;"></i>
+                        <svg class="cfsbr-icon tone-blue" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#ic-intelligence"/></svg>
                     </div>
                     <h3>Hybrid Intelligence</h3>
                     <p>Synthesizing technical depth with strategic business insight.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">
-                        <i data-lucide="users" style="width: 32px; height: 32px; color: #1E5A3C;"></i>
+                        <svg class="cfsbr-icon tone-green" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#ic-data"/></svg>
                     </div>
                     <h3>Data-First</h3>
                     <p>Grounding every recommendation in measurable, empirical evidence.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">
-                        <i data-lucide="award" style="width: 32px; height: 32px; color: #0D3B66;"></i>
+                        <svg class="cfsbr-icon tone-navy" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#ic-network"/></svg>
                     </div>
                     <h3>Scalability</h3>
                     <p>Designing solutions for millions - built to expand sustainably.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">
-                        <i data-lucide="trending-up" style="width: 32px; height: 32px; color: #1E5A3C;"></i>
+                        <svg class="cfsbr-icon tone-green" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#ic-shield-check"/></svg>
                     </div>
                     <h3>Ethical Innovation</h3>
                     <p>We go beyond innovation by adhering to global standards. As a C2PA member, we apply standards of digital authenticity and data security to frameworks like Credalytics.</p>
@@ -386,28 +680,28 @@
             <div class="values-grid">
                 <div class="value-card">
                     <div class="value-icon" style="background: #3D54E6;">
-                        <i data-lucide="layers" style="width: 40px; height: 40px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 40px; height: 40px;" aria-hidden="true"><use href="#ic-intelligence"/></svg>
                     </div>
                     <h3>Hybrid Intelligence</h3>
                     <p>Integrating economics, engineering & strategy for actionable insight.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon" style="background: #0D3B66;">
-                        <i data-lucide="database" style="width: 40px; height: 40px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 40px; height: 40px;" aria-hidden="true"><use href="#ic-data"/></svg>
                     </div>
                     <h3>Data-First</h3>
                     <p>Evidence over assumption - analytics drive every decision.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon" style="background: #1E5A3C;">
-                        <i data-lucide="expand" style="width: 40px; height: 40px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 40px; height: 40px;" aria-hidden="true"><use href="#ic-network"/></svg>
                     </div>
                     <h3>Scalability</h3>
                     <p>Designing solutions built to grow across markets & segments.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon" style="background: #3D54E6;">
-                        <i data-lucide="shield" style="width: 40px; height: 40px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 40px; height: 40px;" aria-hidden="true"><use href="#ic-shield-check"/></svg>
                     </div>
                     <h3>Ethical Innovation</h3>
                     <p>We go beyond innovation by adhering to global standards. As a C2PA member, we apply standards of digital authenticity and data security to frameworks like Credalytics.</p>
@@ -491,7 +785,7 @@
                 <div class="activity-card">
                     <div class="activity-accent" style="background: #3D54E6;"></div>
                     <div class="activity-icon" style="background: #3D54E6;">
-                        <i data-lucide="presentation" style="width: 32px; height: 32px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#ic-data"/></svg>
                     </div>
                     <h3>Deep-Dive Market Intelligence</h3>
                     <p>Going beyond traditional surveys: we use data science and economic modeling to analyze consumer behavior, inflation trends, and digital adoption patterns in emerging markets - delivering the raw data banks and foreign investors need.</p>
@@ -501,7 +795,7 @@
                 <div class="activity-card">
                     <div class="activity-accent" style="background: #1E5A3C;"></div>
                     <div class="activity-icon" style="background: #1E5A3C;">
-                        <i data-lucide="wrench" style="width: 32px; height: 32px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#ic-rocket"/></svg>
                     </div>
                     <h3>Startup Blueprint & MVP Design</h3>
                     <p>A comprehensive launchpad for fintech founders: we design sustainable business models, map technical architectures (Engineering), and validate concepts before market entry to reduce failure risk.</p>
@@ -511,7 +805,7 @@
                 <div class="activity-card">
                     <div class="activity-accent" style="background: #0D3B66;"></div>
                     <div class="activity-icon" style="background: #0D3B66;">
-                        <i data-lucide="scale" style="width: 32px; height: 32px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#ic-shield-check"/></svg>
                     </div>
                     <h3>Regulatory & Policy Advisory</h3>
                     <p>Navigating financial regulations with confidence: we align innovations with Central Bank guidelines and legal frameworks to ensure compliance, safety, and long-term viability.</p>
@@ -521,7 +815,7 @@
                 <div class="activity-card">
                     <div class="activity-accent" style="background: #3D54E6;"></div>
                     <div class="activity-icon" style="background: #3D54E6;">
-                        <i data-lucide="flask-conical" style="width: 32px; height: 32px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#ic-education"/></svg>
                     </div>
                     <h3>Corporate Training & Capacity Building</h3>
                     <p>Hands-on workshops to bridge the skill gap: Financial Data Analytics (SPSS/Python), Research Methodology, and Fintech Fundamentals for students and professionals.</p>
@@ -531,7 +825,7 @@
                 <div class="activity-card">
                     <div class="activity-accent" style="background: #1E5A3C;"></div>
                     <div class="activity-icon" style="background: #1E5A3C;">
-                        <i data-lucide="beaker" style="width: 32px; height: 32px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#ic-research"/></svg>
                     </div>
                     <h3>R&D as a Service</h3>
                     <p>Your external innovation lab: we handle product research, feasibility testing, and impact analysis - delivering innovation faster and more efficiently for banks and NGOs.</p>
@@ -541,7 +835,7 @@
                 <div class="activity-card">
                     <div class="activity-accent" style="background: #0D3B66;"></div>
                     <div class="activity-icon" style="background: #0D3B66;">
-                        <i data-lucide="graduation-cap" style="width: 32px; height: 32px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#ic-handshake"/></svg>
                     </div>
                     <h3>Fintech Fellowship</h3>
                     <p>Nurturing the next generation of thought leaders through a structured mentorship program where undergraduate researchers work on live projects - bridging academic theory and industry application.</p>
@@ -617,9 +911,24 @@
                 </div>
             </div>
 
+            <!-- Publications Toggle Button -->
+            <div class="team-toggle-wrap">
+                <button id="publications-toggle-btn" class="team-toggle-btn" type="button" aria-expanded="false" aria-controls="publications-extended">
+                    <span class="toggle-label">Show Full Publication Catalog</span>
+                    <span class="toggle-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Extended Publications Catalog (Hidden by Default) -->
+            <div class="team-extended" id="publications-extended">
+
             <!-- CFSBR Market Intelligence -->
             <h3 class="intelligence-category-title">
-                <i data-lucide="bar-chart-3" style="width: 24px; height: 24px; color: #3D54E6;"></i>
+                <svg class="cfsbr-icon tone-blue" style="width: 24px; height: 24px;" aria-hidden="true"><use href="#ic-data"/></svg>
                 CFSBR Market Intelligence
             </h3>
             <p class="category-description">Data-driven reports on trends, consumer behavior, and economic indicators. Our market intelligence combines primary research, statistical analysis, and on-ground surveys to reveal infrastructure gaps, adoption barriers, and emerging opportunities in fintech ecosystems. Essential reading for banks, fintech operators, and investors seeking actionable insights into Bangladesh's digital finance landscape.</p>
@@ -663,7 +972,7 @@
 
             <!-- CFSBR White Paper Series -->
             <h3 class="intelligence-category-title">
-                <i data-lucide="lightbulb" style="width: 24px; height: 24px; color: #1E5A3C;"></i>
+                <svg class="cfsbr-icon tone-green" style="width: 24px; height: 24px;" aria-hidden="true"><use href="#ic-vision"/></svg>
                 CFSBR White Paper Series
             </h3>
             <p class="category-description">Technical deep-dives proposing specific solutions to complex financial problems. These papers present innovative algorithms, frameworks, and technological architectures designed to address critical challenges in financial inclusion. From alternative credit scoring models to blockchain implementations, each white paper offers rigorous methodology and practical implementation pathways for fintech innovators and product teams.</p>
@@ -707,7 +1016,7 @@
 
             <!-- CFSBR Strategic Case Series -->
             <h3 class="intelligence-category-title">
-                <i data-lucide="trending-up" style="width: 24px; height: 24px; color: #0D3B66;"></i>
+                <svg class="cfsbr-icon tone-navy" style="width: 24px; height: 24px;" aria-hidden="true"><use href="#ic-network"/></svg>
                 CFSBR Strategic Case Series
             </h3>
             <p class="category-description">Real-world analysis of business strategy, success, and failure. Through detailed post-mortems and retrospective studies, we dissect the strategic decisions behind market entries, pivots, and competitive battles in Bangladesh's fintech sector. These narratives extract actionable lessons on customer acquisition, product strategy, and market positioning - invaluable for founders, strategists, and business leaders navigating competitive landscapes.</p>
@@ -751,7 +1060,7 @@
 
             <!-- CFSBR Policy Perspectives -->
             <h3 class="intelligence-category-title">
-                <i data-lucide="scale" style="width: 24px; height: 24px; color: #f59e0b;"></i>
+                <svg class="cfsbr-icon tone-orange" style="width: 24px; height: 24px;" aria-hidden="true"><use href="#ic-shield-check"/></svg>
                 CFSBR Policy Perspectives
             </h3>
             <p class="category-description">Strategic recommendations for regulators and legal compliance frameworks. Our policy briefs analyze existing regulatory environments, identify gaps in consumer protection, and propose pragmatic amendments to balance innovation with security. Designed for policymakers, legal teams, and compliance officers, these documents bridge the gap between technological advancement and regulatory oversight in digital finance.</p>
@@ -795,7 +1104,7 @@
 
             <!-- Academic Contributions -->
             <h3 class="intelligence-category-title">
-                <i data-lucide="award" style="width: 24px; height: 24px; color: #8b5cf6;"></i>
+                <svg class="cfsbr-icon" style="width: 24px; height: 24px; color: #8b5cf6;" aria-hidden="true"><use href="#ic-award"/></svg>
                 Academic Contributions (External Validation)
             </h3>
             <p class="category-description">Our rigorous research accepted in prestigious international journals and conferences. Each publication undergoes peer review, ensuring methodological soundness and academic integrity. These contributions validate CFSBR's commitment to evidence-based research while establishing credibility within scholarly communities. From behavioral studies to macroeconomic analysis, our academic work demonstrates the depth and rigor behind our applied research initiatives.</p>
@@ -839,6 +1148,9 @@
                     </button>
                 </div>
             </div>
+
+            <!-- End of Extended Publications Catalog -->
+            </div>
         </div>
     </section>
 
@@ -862,7 +1174,90 @@
                     <option value="founding-board-index">Level 05: Founding Board & Secretariat</option>
                 </select>
             </div>
-            
+
+            <!-- Toggle Button (sits right under the Navigate dropdown) -->
+            <div class="team-toggle-wrap">
+                <button id="team-toggle-btn" class="team-toggle-btn" type="button" aria-expanded="false" aria-controls="team-extended">
+                    <span class="toggle-label">Show Full Team Structure</span>
+                    <span class="toggle-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Founders Block (Default Visible — shown when toggle is closed) -->
+            <div class="team-founders-default" id="team-founders-default">
+                <h3 id="founding-board-index" class="team-subsection-title team-founders-anchor">Level 05: Founding Board &amp; Secretariat</h3>
+                <p class="team-description">Visionary Infrastructure &amp; Multidisciplinary Integration</p>
+                <div class="leadership-grid">
+                    <div class="team-card pillar-finance is-founder-card">
+                        <div class="team-avatar">
+                            <img src="photos/team/MGM Rafi.jpg" alt="Md Golam Mubasshir Rafi" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <h3 class="team-name">Md Golam Mubasshir Rafi</h3>
+                        <p class="team-position">Founding Member</p>
+                        <span class="pillar-badge finance">Business Administration</span>
+                    </div>
+
+                    <div class="team-card pillar-cse is-founder-card">
+                        <div class="team-avatar">
+                            <img src="photos/team/AT Zoa.jpg" alt="Afshara Tasneem Zoa" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <h3 class="team-name">Afshara Tasneem Zoa</h3>
+                        <p class="team-position">Founding Member</p>
+                        <span class="pillar-badge cse">Computer Science and Engineering</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5.1 Team Member Block (Default Visible — mirrors Level 05 dual-block pattern) -->
+            <div class="team-founders-default" id="team-member-default" style="margin-top: 3rem;">
+                <h3 id="team-member-index" class="team-subsection-title">Level 05.1: Team Member</h3>
+                <p class="team-description">Active members contributing across CFSBR's research, innovation, and strategic execution wings.</p>
+                <div class="leadership-grid">
+                    <div class="team-card pillar-cse is-founder-card">
+                        <div class="team-avatar">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                                <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                                <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="team-name">Technical Member</h3>
+                        <p class="team-position">Team Member</p>
+                        <span class="pillar-badge cse">CSE</span>
+                    </div>
+
+                    <div class="team-card pillar-economics is-founder-card">
+                        <div class="team-avatar">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                                <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                                <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="team-name">Research Member</h3>
+                        <p class="team-position">Team Member</p>
+                        <span class="pillar-badge economics">Economics</span>
+                    </div>
+
+                    <div class="team-card pillar-finance is-founder-card">
+                        <div class="team-avatar">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                                <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                                <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="team-name">Innovation Member</h3>
+                        <p class="team-position">Team Member</p>
+                        <span class="pillar-badge finance">Finance</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Extended Team Structure (Hidden by Default; shown when toggle is open) -->
+            <div class="team-extended" id="team-extended">
+
             <!-- Level 01: Advisory Board -->
             <h3 id="advisory-board-index" class="team-subsection-title">Level 01: Advisory Board</h3>
             <p class="team-description">Strategic Mentorship & Academic Credibility</p>
@@ -878,7 +1273,7 @@
                     <p class="team-position">Academic Advisor</p>
                     <span class="pillar-badge economics">Economics</span>
                 </div>
-                
+
                 <div class="team-card pillar-finance">
                     <div class="team-avatar">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
@@ -890,7 +1285,7 @@
                     <p class="team-position">Academic Advisor</p>
                     <span class="pillar-badge finance">Finance</span>
                 </div>
-                
+
                 <div class="team-card pillar-cse">
                     <div class="team-avatar">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
@@ -902,7 +1297,7 @@
                     <p class="team-position">Academic Advisor</p>
                     <span class="pillar-badge cse">CSE</span>
                 </div>
-                
+
                 <div class="team-card pillar-law">
                     <div class="team-avatar">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
@@ -1125,30 +1520,77 @@
                 </div>
             </div>
 
-            <!-- Level 05: Founding Board & Secretariat -->
-            <h3 id="founding-board-index" class="team-subsection-title">Level 05: Founding Board & Secretariat (The Foundation)</h3>
-            <p class="team-description">Visionary Infrastructure & Multidisciplinary Integration</p>
-            <div class="leadership-grid">
-                <div class="team-card pillar-finance">
-                    <div class="team-avatar">
-                        <img src="photos/team/MGM Rafi.jpg" alt="Md Golam Mubasshir Rafi" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            <!-- Level 05: Founding Board (shown at the BOTTOM of the expanded hierarchy) -->
+            <div class="team-founders-expanded" id="team-founders-expanded">
+                <h3 class="team-subsection-title">Level 05: Founding Board &amp; Secretariat</h3>
+                <p class="team-description">Visionary Infrastructure &amp; Multidisciplinary Integration</p>
+                <div class="leadership-grid">
+                    <div class="team-card pillar-finance is-founder-card">
+                        <div class="team-avatar">
+                            <img src="photos/team/MGM Rafi.jpg" alt="Md Golam Mubasshir Rafi" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <h3 class="team-name">Md Golam Mubasshir Rafi</h3>
+                        <p class="team-position">Founding Member</p>
+                        <span class="pillar-badge finance">Business Administration</span>
                     </div>
-                    <h3 class="team-name">Md Golam Mubasshir Rafi</h3>
-                    <p class="team-position">Founding Member</p>
-                    <span class="pillar-badge finance">Business Administration</span>
-                </div>
-                
-                <div class="team-card pillar-cse">
-                    <div class="team-avatar">
-                        <img src="photos/team/AT Zoa.jpg" alt="Afshara Tasneem Zoa" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+
+                    <div class="team-card pillar-cse is-founder-card">
+                        <div class="team-avatar">
+                            <img src="photos/team/AT Zoa.jpg" alt="Afshara Tasneem Zoa" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <h3 class="team-name">Afshara Tasneem Zoa</h3>
+                        <p class="team-position">Founding Member</p>
+                        <span class="pillar-badge cse">Computer Science and Engineering</span>
                     </div>
-                    <h3 class="team-name">Afshara Tasneem Zoa</h3>
-                    <p class="team-position">Founding Member</p>
-                    <span class="pillar-badge cse">Computer Science and Engineering</span>
                 </div>
             </div>
-            
-            <!-- See More Button -->
+
+            <!-- 5.1 Team Member (Expanded Position — shown when toggle is open, mirrors founders-expanded) -->
+            <div class="team-founders-expanded" id="team-member-expanded" style="margin-top: 3rem;">
+                <h3 class="team-subsection-title">Level 05.1: Team Member</h3>
+                <p class="team-description">Active members contributing across CFSBR's research, innovation, and strategic execution wings.</p>
+                <div class="leadership-grid">
+                    <div class="team-card pillar-cse is-founder-card">
+                        <div class="team-avatar">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                                <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                                <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="team-name">Technical Member</h3>
+                        <p class="team-position">Team Member</p>
+                        <span class="pillar-badge cse">CSE</span>
+                    </div>
+
+                    <div class="team-card pillar-economics is-founder-card">
+                        <div class="team-avatar">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                                <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                                <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="team-name">Research Member</h3>
+                        <p class="team-position">Team Member</p>
+                        <span class="pillar-badge economics">Economics</span>
+                    </div>
+
+                    <div class="team-card pillar-finance is-founder-card">
+                        <div class="team-avatar">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                                <circle cx="12" cy="8" r="3" fill="currentColor"/>
+                                <path d="M12 14c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="team-name">Innovation Member</h3>
+                        <p class="team-position">Team Member</p>
+                        <span class="pillar-badge finance">Finance</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of Extended Team Structure -->
+            </div>
+
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="team.html" class="btn-primary btn-large">See Full Team Structure</a>
             </div>
@@ -1175,7 +1617,7 @@
             <div class="collaboration-grid">
                 <div class="collaboration-card">
                     <div class="collab-icon" style="background: linear-gradient(135deg, #3D54E6 0%, #5a6eeb 100%);">
-                        <i data-lucide="graduation-cap" style="width: 40px; height: 40px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 40px; height: 40px;" aria-hidden="true"><use href="#ic-education"/></svg>
                     </div>
                     <h3>For Students</h3>
                     <h4 class="collab-cta">Join as a Fellow</h4>
@@ -1195,7 +1637,7 @@
 
                 <div class="collaboration-card">
                     <div class="collab-icon" style="background: linear-gradient(135deg, #1E5A3C 0%, #2d7a55 100%);">
-                        <i data-lucide="rocket" style="width: 40px; height: 40px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 40px; height: 40px;" aria-hidden="true"><use href="#ic-rocket"/></svg>
                     </div>
                     <h3>For Startups</h3>
                     <h4 class="collab-cta">Hire Us for Strategy</h4>
@@ -1213,7 +1655,7 @@
 
                 <div class="collaboration-card">
                     <div class="collab-icon" style="background: linear-gradient(135deg, #0D3B66 0%, #1a5280 100%);">
-                        <i data-lucide="handshake" style="width: 40px; height: 40px; color: white;"></i>
+                        <svg class="cfsbr-icon tone-white" style="width: 40px; height: 40px;" aria-hidden="true"><use href="#ic-handshake"/></svg>
                     </div>
                     <h3>For Partners</h3>
                     <h4 class="collab-cta">Collaborate on Policy</h4>
@@ -1335,68 +1777,141 @@
     </footer>
 
     <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-
-                    // Update active nav link
-                    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-                    this.classList.add('active');
-                }
-            });
-        });
-
-        // Update active nav on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section[id]');
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - 100)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Team Filter Dropdown Functionality for Index Page
-        document.getElementById('team-filter-index').addEventListener('change', function() {
-            const selectedValue = this.value;
-            if (selectedValue) {
-                const targetElement = document.getElementById(selectedValue);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'start' 
-                    });
-                    // Reset dropdown after navigation
-                    setTimeout(() => {
-                        this.value = '';
-                    }, 1000);
-                }
+        // Wait for DOM ready and (if available) Lucide to be ready before running.
+        function ready(fn) {
+            if (document.readyState !== 'loading') {
+                fn();
+            } else {
+                document.addEventListener('DOMContentLoaded', fn);
             }
+        }
+
+        ready(function () {
+            // Initialize Lucide icons safely (script is loaded with `defer`)
+            try {
+                if (typeof lucide !== 'undefined' && lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
+            } catch (err) {
+                console.warn('Lucide icons could not be initialized:', err);
+            }
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+
+                        // Update active nav link
+                        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            // Update active nav on scroll
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const sections = document.querySelectorAll('section[id]');
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Team Filter Dropdown Functionality for Index Page (with null guard)
+            const teamFilter = document.getElementById('team-filter-index');
+            if (teamFilter) {
+                teamFilter.addEventListener('change', function () {
+                    const selectedValue = this.value;
+                    if (selectedValue) {
+                        const targetElement = document.getElementById(selectedValue);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                            // Reset dropdown after navigation
+                            setTimeout(() => {
+                                this.value = '';
+                            }, 1000);
+                        }
+                    }
+                });
+            }
+
+            // Generic toggle helper used by both team and publications sections.
+            function bindToggle(buttonId, panelId, openText, closedText) {
+                const btn = document.getElementById(buttonId);
+                const panel = document.getElementById(panelId);
+                if (!btn || !panel) return;
+
+                const label = btn.querySelector('.toggle-label');
+                btn.setAttribute('aria-expanded', 'false');
+
+                // Optional companion block pairs to flip when toggling.
+                // Comma-separated IDs in data-companion-default / data-companion-expanded
+                // (e.g. "team-founders-default,team-member-default" → swap both at once).
+                const defaultIds  = (btn.dataset.companionDefault  || '').split(',').map(s => s.trim()).filter(Boolean);
+                const expandedIds = (btn.dataset.companionExpanded || '').split(',').map(s => s.trim()).filter(Boolean);
+                const defaultBlocks  = defaultIds.map(id  => document.getElementById(id)).filter(Boolean);
+                const expandedBlocks = expandedIds.map(id => document.getElementById(id)).filter(Boolean);
+
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const isOpen = panel.classList.toggle('team-extended-open');
+                    btn.classList.toggle('team-toggle-open', isOpen);
+                    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    if (label && openText && closedText) {
+                        label.textContent = isOpen ? openText : closedText;
+                    }
+
+                    // Swap companion blocks so they appear at top when collapsed, at bottom when expanded.
+                    defaultBlocks.forEach(b => { b.style.display = isOpen ? 'none' : 'block'; });
+                    expandedBlocks.forEach(b => { b.style.display = isOpen ? 'block' : 'none'; });
+                });
+            }
+
+            // Team Section Toggle (Plan A: Default = Founders + Team Member)
+            const teamBtnEl = document.getElementById('team-toggle-btn');
+            if (teamBtnEl) {
+                teamBtnEl.dataset.companionDefault  = 'team-founders-default,team-member-default';
+                teamBtnEl.dataset.companionExpanded = 'team-founders-expanded,team-member-expanded';
+            }
+            bindToggle(
+                'team-toggle-btn',
+                'team-extended',
+                'Hide Full Team Structure',
+                'Show Full Team Structure'
+            );
+
+            // Publications Toggle (Same Pattern: Default = 2 Featured Only)
+            bindToggle(
+                'publications-toggle-btn',
+                'publications-extended',
+                'Hide Full Publication Catalog',
+                'Show Full Publication Catalog'
+            );
         });
     </script>
     </main>

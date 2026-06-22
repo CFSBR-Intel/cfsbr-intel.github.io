@@ -4828,3 +4828,295 @@ h4.team-subsection-title::after {
 .citation-generator .citation-tab {
     color: #475569;
 }
+
+
+/* ============================================================================
+
+   CFSBR Custom Icon System
+
+   ---------------------------------------------------------------------------
+
+   Loaded from photos/icons.svg via <use href="...#ic-name"/>.
+
+   Inherits colour from currentColor, so a parent color: paints the icon.
+
+   ============================================================================ */
+
+
+
+.cfsbr-icon {
+
+    display: inline-block;
+
+    width: 1em;
+
+    height: 1em;
+
+    vertical-align: -0.125em;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    flex-shrink: 0;
+
+    transition: transform 0.25s ease, color 0.25s ease;
+
+}
+
+
+
+/* Fixed-size variants (in pixels) — use class on the <svg>. */
+
+.cfsbr-icon.size-14 { width: 14px; height: 14px; }
+
+.cfsbr-icon.size-16 { width: 16px; height: 16px; }
+
+.cfsbr-icon.size-18 { width: 18px; height: 18px; }
+
+.cfsbr-icon.size-20 { width: 20px; height: 20px; }
+
+.cfsbr-icon.size-22 { width: 22px; height: 22px; }
+
+.cfsbr-icon.size-24 { width: 24px; height: 24px; }
+
+.cfsbr-icon.size-28 { width: 28px; height: 28px; }
+
+.cfsbr-icon.size-32 { width: 32px; height: 32px; }
+
+.cfsbr-icon.size-36 { width: 36px; height: 36px; }
+
+.cfsbr-icon.size-40 { width: 40px; height: 40px; }
+
+.cfsbr-icon.size-48 { width: 48px; height: 48px; }
+
+.cfsbr-icon.size-64 { width: 64px; height: 64px; }
+
+
+
+/* Mark needs a slightly heavier stroke for presence */
+
+.cfsbr-icon.is-mark { stroke-width: 1.5; }
+
+
+
+/* Brand-colour helpers (use sparingly — prefer parent color) */
+
+.cfsbr-icon.tone-navy   { color: var(--primary-dark, #0D3B66); }
+
+.cfsbr-icon.tone-blue   { color: var(--primary-blue, #3D54E6); }
+
+.cfsbr-icon.tone-green  { color: var(--primary-green, #1E5A3C); }
+
+.cfsbr-icon.tone-orange { color: var(--accent-orange, #f59e0b); }
+
+.cfsbr-icon.tone-gold   { color: #C9A24A; }
+
+.cfsbr-icon.tone-white  { color: #ffffff; }
+
+.cfsbr-icon.tone-ink    { color: #0F2A47; }
+
+
+
+/* Hover micro-interactions for actionable icons */
+
+a:hover .cfsbr-icon.icon-shift { transform: translateX(2px); }
+
+a:hover .cfsbr-icon.icon-lift  { transform: translateY(-2px); }
+
+.btn:hover .cfsbr-icon.icon-shift { transform: translateX(3px); }
+
+.btn-primary:hover .cfsbr-icon.icon-shift { transform: translateX(3px); }
+
+.btn:hover .cfsbr-icon.icon-spin   { transform: rotate(8deg); }
+
+
+
+/* Icon-on-circle pattern used in mission/vision cards */
+
+.cfsbr-icon-tile {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 64px;
+
+    height: 64px;
+
+    border-radius: 14px;
+
+    background: var(--light-green, #e8f5e9);
+
+    color: var(--primary-green, #1E5A3C);
+
+    flex-shrink: 0;
+
+    transition: transform 0.3s ease, background 0.3s ease;
+
+}
+
+.cfsbr-icon-tile.tone-blue   { background: var(--light-blue, #e3f2fd); color: var(--primary-blue, #3D54E6); }
+
+.cfsbr-icon-tile.tone-orange { background: var(--light-orange, #fff9e6); color: var(--accent-orange, #f59e0b); }
+
+.cfsbr-icon-tile.tone-navy   { background: rgba(13,59,102,0.08); color: var(--primary-dark, #0D3B66); }
+
+.cfsbr-icon-tile.tone-gold   { background: rgba(201,162,74,0.12); color: #C9A24A; }
+
+.cfsbr-icon-tile.tone-ink    { background: rgba(15,42,71,0.08); color: #0F2A47; }
+
+.cfsbr-icon-tile .cfsbr-icon { width: 32px; height: 32px; }
+
+.mission-card:hover .cfsbr-icon-tile,
+
+.vision-card:hover .cfsbr-icon-tile {
+
+    transform: scale(1.06) rotate(-2deg);
+
+}
+
+
+
+/* Section divider — full-width geometric line */
+
+.section-divider {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 0 auto;
+
+    width: 100%;
+
+    max-width: 120px;
+
+    color: var(--primary-blue, #3D54E6);
+
+    opacity: 0.55;
+
+}
+
+.section-divider .cfsbr-icon { width: 100%; height: 12px; }
+
+
+
+/* Override the bare Lucide stroke for parity with our 2px custom set */
+
+[data-lucide] {
+
+    stroke-width: 2;
+
+}
+
+
+
+/* Legacy Lucide icons that survive for utility (arrows, mail, phone, socials)
+
+   keep currentColor inheritance and gain the same hover shift */
+
+i[data-lucide].icon-shift { transition: transform 0.25s ease; }
+
+a:hover i[data-lucide].icon-shift { transform: translateX(2px); }
+
+.btn:hover i[data-lucide].icon-shift { transform: translateX(3px); }
+
+/* ============================================
+   Team Section: Plan A Toggle (Default: Founders Only)
+   ============================================ */
+
+/* Founders block (default visible, BEFORE the wrapper) — JS toggles its display */
+.team-founders-default {
+    display: block;
+}
+
+/* Founders block at the bottom of the expanded hierarchy — JS shows it only when expanded */
+.team-founders-expanded {
+    display: none;
+    margin-top: 2rem;
+}
+
+/* Wrapper that holds the rest of the team structure. Hidden by default. */
+.team-extended {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.5s ease,
+                margin-top 0.5s ease;
+    margin-top: 0;
+}
+
+.team-extended.team-extended-open {
+    max-height: 12000px;
+    opacity: 1;
+    margin-top: 2rem;
+}
+
+/* Toggle button styled as a soft outline pill */
+.team-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #1E5A3C;
+    border: 2px solid #1E5A3C;
+    padding: 0.75rem 1.75rem;
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease,
+                transform 0.25s ease, box-shadow 0.25s ease;
+    min-height: 48px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: inherit;
+    line-height: 1.2;
+}
+
+.team-toggle-btn:hover {
+    background: #1E5A3C;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 90, 60, 0.25);
+}
+
+.team-toggle-btn .toggle-icon {
+    transition: transform 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.team-toggle-btn.team-toggle-open .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.team-toggle-wrap {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Subtle visual marker between founders and the rest */
+.team-founders-anchor {
+    scroll-margin-top: 100px;
+}
+
+/* Subtle "founding" highlight on the default-visible cards */
+.team-card.is-founder-card {
+    border: 1.5px solid rgba(30, 90, 60, 0.35);
+    box-shadow: 0 6px 20px rgba(30, 90, 60, 0.08);
+}
+
