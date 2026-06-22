@@ -6,6 +6,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
+Sitemap: https://cfsbr.com/sitemap.xml
 Sitemap: https://cfsbr.gmrafi.com.bd/sitemap.xml
 Sitemap: https://cfsbr-intel.github.io/sitemap.xml
 

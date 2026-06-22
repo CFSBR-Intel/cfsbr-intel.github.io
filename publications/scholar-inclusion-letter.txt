@@ -8,15 +8,17 @@ Dear Google Scholar Inclusion Team,
 We are writing to formally request the inclusion of the CFSBR Institutional White Paper Series in Google Scholar's index. CFSBR (Centre for Fintech and Strategic Business Research) is a Bangladesh-based independent research centre that publishes policy and strategic white papers, brief-format research, and institutional repository frameworks in the fields of financial technology, strategic management, regulatory policy, and digital inclusion.
 
 About our domain setup (for the Scholar team's reference):
-CFSBR maintains two production domains that are intentionally co-primary. cfsbr-intel.github.io is the GitHub Pages mirror registered against the Crossref DOI prefix and serves as the official landing-page URL for each registered article (this is the URL the DOI resolves to). cfsbr.gmrafi.com.bd is the branded publisher website (Vercel-hosted) used as the publisher and imprint URL. Both serve identical, world-readable content. Each article page therefore carries canonical and citation tags pointing to the GitHub Pages article URL, while the JSON-LD publisher block and the imprint pages point to the branded domain. This dual-domain setup is fully reflected in sameAs and our sitemap.
+CFSBR maintains three production domains that are intentionally co-primary. cfsbr-intel.github.io is the GitHub Pages mirror registered against the Crossref DOI prefix and serves as the official landing-page URL for each registered article (this is the URL the DOI resolves to). cfsbr.gmrafi.com.bd is the Bangladesh/regional publisher website (Vercel-hosted) used as the publisher and imprint URL. cfsbr.com is the new global English-language brand domain (canonical short address for international traffic), registered and pointed at the same publication infrastructure. All three serve identical, world-readable content. Each article page therefore carries canonical and citation tags pointing to the GitHub Pages article URL, while the JSON-LD publisher block and the imprint pages point to the branded domains. This tri-domain setup is fully reflected in sameAs and our sitemap.
 
 1. Publisher Profile
 - Publisher name (canonical): Centre for Fintech and Strategic Business Research
 - Publisher short name / imprint: CFSBR Intelligence
 - Country of publication: Bangladesh
-- Primary publisher domain (imprint and brand): https://cfsbr.gmrafi.com.bd
+- Global brand domain (international, English): https://cfsbr.com
+- Regional publisher domain (Bangladesh imprint, Vercel): https://cfsbr.gmrafi.com.bd
 - Article-landing domain (DOI resolve target, GitHub Pages): https://cfsbr-intel.github.io
-- Series landing page (brand): https://cfsbr.gmrafi.com.bd/publications.html
+- Series landing page (global brand): https://cfsbr.com/publications.html
+- Series landing page (regional imprint): https://cfsbr.gmrafi.com.bd/publications.html
 - Series landing page (mirror): https://cfsbr-intel.github.io/publications.html
 - Series scope: White papers, policy briefs, institutional repository research, fintech and digital finance
 - ISSN status: Application under review by ISSN National Centre, Bangladesh. Pending printed-ISSN issuance.
@@ -28,7 +30,8 @@ The following article-level landing pages and their associated full-text PDFs ar
 Article #1 — CFSBR WP-001.v1
   Title: C.A.S.E. (Class Assignment Series: Edition) and Institutional Repository and Academic Publishing Strategy
   Landing page (DOI target): https://cfsbr-intel.github.io/publications/cfsbr-case-framework-2026
-  Landing page (brand mirror): https://cfsbr.gmrafi.com.bd/publications/cfsbr-case-framework-2026
+  Landing page (global brand mirror): https://cfsbr.com/publications/cfsbr-case-framework-2026
+  Landing page (regional imprint mirror): https://cfsbr.gmrafi.com.bd/publications/cfsbr-case-framework-2026
   Full-text PDF: https://cfsbr-intel.github.io/photos/pdf/CFSBR_CASE_Strategic_Framework_2026%20v1.pdf
   DOI: 10.67226/cfsbr.wp.2026.001.v1 (registered with Crossref via the institutional prefix 10.67226, DataCite member)
   Authors: Md Golam Mubasshir Rafi; Afshara Tasneem Zoa
@@ -41,8 +44,8 @@ Article #1 — CFSBR WP-001.v1
 - Open Graph and Twitter Card tags are present for social and aggregator crawlers.
 - Schema.org ScholarlyArticle JSON-LD is present on each article page, including publisher, identifier, doi, license, sameAs, and BreadcrumbList.
 - Canonical URL is declared in <link rel="canonical"> on the GitHub Pages mirror (the URL the DOI resolves to).
-- The branded domain (cfsbr.gmrafi.com.bd) is referenced from sameAs, the publisher.url, the publisher.logo.url, and the breadcrumb list, so Scholar can crawl it for imprint and editorial context.
-- robots.txt permits all user-agents; a valid sitemap.xml is published at https://cfsbr.gmrafi.com.bd/sitemap.xml and mirrored at https://cfsbr-intel.github.io/sitemap.xml.
+- The branded domains (cfsbr.com and cfsbr.gmrafi.com.bd) are referenced from sameAs, the publisher.url, the publisher.logo.url, and the breadcrumb list, so Scholar can crawl them for imprint and editorial context.
+- robots.txt permits all user-agents; a valid sitemap.xml is published at https://cfsbr.gmrafi.com.bd/sitemap.xml, https://cfsbr.com/sitemap.xml, and https://cfsbr-intel.github.io/sitemap.xml.
 - Full-text PDFs are real PDFs (not scanned images): they contain a live text layer that is indexable by Scholar's PDF crawler.
 - DOIs are registered with Crossref (DataCite member prefix 10.67226) and resolve via https://doi.org/ to the article's GitHub Pages landing page.
 
@@ -64,10 +67,11 @@ We kindly request that Google Scholar:
 7. Verification Artefacts (for your convenience)
 - DOI registration: https://doi.org/10.67226/cfsbr.wp.2026.001.v1 — resolves to the GitHub Pages article landing page.
 - Crossref publisher prefix: 10.67226 — registered to Centre for Fintech and Strategic Business Research.
-- Sitemap (brand): https://cfsbr.gmrafi.com.bd/sitemap.xml
-- Sitemap (mirror): https://cfsbr-intel.github.io/sitemap.xml
-- robots.txt: https://cfsbr.gmrafi.com.bd/robots.txt
-- Editorial and imprint: https://cfsbr.gmrafi.com.bd/about.html and https://cfsbr.gmrafi.com.bd/wings.html
+- Sitemap (global brand): https://cfsbr.com/sitemap.xml
+- Sitemap (regional imprint): https://cfsbr.gmrafi.com.bd/sitemap.xml
+- Sitemap (open-science mirror): https://cfsbr-intel.github.io/sitemap.xml
+- robots.txt: https://cfsbr.com/robots.txt, https://cfsbr.gmrafi.com.bd/robots.txt, and https://cfsbr-intel.github.io/robots.txt
+- Editorial and imprint: https://cfsbr.com/about.html, https://cfsbr.gmrafi.com.bd/about.html, and https://cfsbr.gmrafi.com.bd/wings.html
 
 Please let us know if any further information is required. We are happy to provide additional documentation, a sample ZIP of article metadata, or to schedule a brief call if it would help expedite verification.
 
@@ -78,5 +82,6 @@ Editorial Office
 Centre for Fintech and Strategic Business Research (CFSBR)
 Wing A: Research and Intelligence
 E-mail: info.cfsbr@gmail.com
-Brand web: https://cfsbr.gmrafi.com.bd
+Brand web: https://cfsbr.com
+Regional imprint: https://cfsbr.gmrafi.com.bd
 Open-science mirror: https://cfsbr-intel.github.io
