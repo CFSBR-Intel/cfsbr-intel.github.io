@@ -1030,15 +1030,30 @@ h4.team-subsection-title::after {
 
 .section-title {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2.75rem;
+    font-size: 2.85rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 1rem;
-    padding-bottom: 1.1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
     position: relative;
     display: inline-block;
     line-height: 1.15;
     letter-spacing: -0.5px;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: -1.75rem;
+    top: 0.6rem;
+    width: 6px;
+    height: 70%;
+    background: linear-gradient(180deg, var(--primary-green, #1E5A3C) 0%, var(--accent-orange, #f59e0b) 100%);
+    border-radius: 3px;
+}
+
+.section-header .section-title::before {
+    display: none;
 }
 
 .section-title::after {
@@ -1046,11 +1061,11 @@ h4.team-subsection-title::after {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 72px;
+    width: 80px;
     height: 5px;
     background: linear-gradient(90deg, var(--primary-green, #1E5A3C) 0%, var(--accent-orange, #f59e0b) 100%);
     border-radius: 3px;
-    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+    box-shadow: 0 2px 10px rgba(245, 158, 11, 0.4);
 }
 
 .section-header .section-title {
@@ -1090,6 +1105,25 @@ h4.team-subsection-title::after {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--primary-green, #1E5A3C);
+    position: relative;
+}
+
+.section-eyebrow::before {
+    content: "";
+    position: absolute;
+    left: -2.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background: var(--accent-orange, #f59e0b);
+    border-radius: 3px;
+    transform-origin: center;
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.4);
+}
+
+.section-header .section-eyebrow::before {
+    display: none;
 }
 
 .eyebrow-num {
@@ -1105,7 +1139,7 @@ h4.team-subsection-title::after {
     font-weight: 800;
     letter-spacing: 0.5px;
     font-size: 0.82rem;
-    box-shadow: 0 4px 12px rgba(30, 90, 60, 0.25);
+    box-shadow: 0 4px 12px rgba(30, 90, 60, 0.35);
 }
 
 .eyebrow-line {
