@@ -472,9 +472,10 @@ h4.team-subsection-title::after {
 
 /* About Section */
 .about-section {
-    padding: 5rem 0;
+    padding: 6.5rem 0;
     background: #f9fafb;
     text-align: center;
+    position: relative;
 }
 
 .section-title {
@@ -619,8 +620,9 @@ h4.team-subsection-title::after {
 
 /* Values Section */
 .values-section {
-    padding: 5rem 0;
-    background: #f9fafb;
+    padding: 6.5rem 0;
+    background: #ffffff;
+    position: relative;
 }
 
 .values-grid {
@@ -749,8 +751,9 @@ h4.team-subsection-title::after {
 
 /* Team Section */
 .team-section {
-    padding: 3rem 0;
-    background: #f9fafb;
+    padding: 6.5rem 0 4rem 0;
+    background: #ffffff;
+    position: relative;
 }
 
 /* Team Filter Styles */
@@ -1015,32 +1018,39 @@ h4.team-subsection-title::after {
 
 /* Activities Section */
 .activities-section {
-    padding: 5rem 0;
-    background: var(--white);
+    padding: 6.5rem 0;
+    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+    position: relative;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.75rem;
+    font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 1rem;
+    padding-bottom: 1.1rem;
     position: relative;
     display: inline-block;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
 }
 
 .section-title::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -10px;
-    width: 56px;
-    height: 4px;
+    bottom: 0;
+    width: 72px;
+    height: 5px;
     background: linear-gradient(90deg, var(--primary-green, #1E5A3C) 0%, var(--accent-orange, #f59e0b) 100%);
-    border-radius: 2px;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
 }
 
 .section-header .section-title {
@@ -1054,23 +1064,30 @@ h4.team-subsection-title::after {
     display: block;
 }
 
+/* When title is centered inside .section-header, center the underline too */
+.section-header .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .section-subtitle {
     font-size: 1.125rem;
     color: var(--text-gray);
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto;
+    line-height: 1.7;
 }
 
 /* Section eyebrow tag (number + accent line + label) */
 .section-eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
     font-family: 'Inter', -apple-system, sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--primary-green, #1E5A3C);
 }
@@ -1079,30 +1096,31 @@ h4.team-subsection-title::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 32px;
-    height: 32px;
-    padding: 0 0.6rem;
-    border-radius: 16px;
-    background: var(--primary-green, #1E5A3C);
+    min-width: 36px;
+    height: 36px;
+    padding: 0 0.75rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--primary-green, #1E5A3C) 0%, #2d7a55 100%);
     color: #fff;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.5px;
-    font-size: 0.78rem;
+    font-size: 0.82rem;
+    box-shadow: 0 4px 12px rgba(30, 90, 60, 0.25);
 }
 
 .eyebrow-line {
     display: inline-block;
-    width: 28px;
-    height: 2px;
+    width: 40px;
+    height: 3px;
     background: linear-gradient(90deg, var(--primary-green, #1E5A3C) 0%, var(--accent-orange, #f59e0b) 100%);
-    border-radius: 1px;
+    border-radius: 2px;
 }
 
 .eyebrow-label {
     color: var(--text-gray, #475569);
-    font-weight: 600;
-    font-size: 0.78rem;
-    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
 }
 
 /* Section divider (subtle visual separator between major blocks) */
@@ -1110,15 +1128,37 @@ h4.team-subsection-title::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem 0;
+    padding: 2.5rem 0;
     background: transparent;
+    position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--primary-green, #1E5A3C) 100%);
+    opacity: 0.35;
+}
+
+.section-divider::before {
+    left: calc(50% - 110px);
+    transform: translateY(-50%) scaleX(-1);
+}
+
+.section-divider::after {
+    right: calc(50% - 110px);
+    transform: translateY(-50%);
 }
 
 .section-divider svg {
-    width: 140px;
-    height: 12px;
+    width: 180px;
+    height: 16px;
     color: var(--primary-green, #1E5A3C);
-    opacity: 0.35;
+    opacity: 0.55;
 }
 
 .activities-grid {
@@ -1202,8 +1242,9 @@ h4.team-subsection-title::after {
 
 /* Intelligence & Insights Section - New Design */
 .intelligence-section {
-    padding: 5rem 0;
-    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+    padding: 6.5rem 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    position: relative;
 }
 
 .intelligence-category-title {
@@ -1612,8 +1653,9 @@ h4.team-subsection-title::after {
 }
 
 /* Collaboration Section */
-.collaboration-section {
-    padding: 6rem 0;
+.collaboration.5rem 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    position: relative
     background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
 }
 
@@ -2298,11 +2340,16 @@ h4.team-subsection-title::after {
     }
     
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
     }
-    
+
     .section-description {
-        font-size: 0.875rem;
+        font-size: 0.95rem;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+        width: 40px;
     }
     
     .value-card h3,
