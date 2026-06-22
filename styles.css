@@ -1028,6 +1028,30 @@ h4.team-subsection-title::after {
     font-size: 2.5rem;
     color: var(--text-dark);
     margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 56px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green, #1E5A3C) 0%, var(--accent-orange, #f59e0b) 100%);
+    border-radius: 2px;
+}
+
+.section-header .section-title {
+    display: inline-block;
+}
+
+/* About / Featured Intelligence / Team use left-aligned titles — keep underline at left */
+.about-section .section-title,
+.intelligence-section .section-title,
+.team-section .section-title {
+    display: block;
 }
 
 .section-subtitle {
@@ -1035,6 +1059,66 @@ h4.team-subsection-title::after {
     color: var(--text-gray);
     max-width: 700px;
     margin: 0 auto;
+}
+
+/* Section eyebrow tag (number + accent line + label) */
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--primary-green, #1E5A3C);
+}
+
+.eyebrow-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 0.6rem;
+    border-radius: 16px;
+    background: var(--primary-green, #1E5A3C);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 0.78rem;
+}
+
+.eyebrow-line {
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-green, #1E5A3C) 0%, var(--accent-orange, #f59e0b) 100%);
+    border-radius: 1px;
+}
+
+.eyebrow-label {
+    color: var(--text-gray, #475569);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+}
+
+/* Section divider (subtle visual separator between major blocks) */
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+    background: transparent;
+}
+
+.section-divider svg {
+    width: 140px;
+    height: 12px;
+    color: var(--primary-green, #1E5A3C);
+    opacity: 0.35;
 }
 
 .activities-grid {
