@@ -1023,37 +1023,91 @@ h4.team-subsection-title::after {
     position: relative;
 }
 
+/* =============================================================
+   SECTION HEADERS — Uniform academic pattern (all 7 sections)
+   Eyebrow (number + line + label) → Serif title (with green
+   accent) → double-line underline → subtitle. Journal-style.
+   ============================================================= */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 4.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.section-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2.85rem;
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.4rem;
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 0.78rem;
     font-weight: 700;
-    color: var(--text-dark);
-    margin: 0 auto 1rem;
-    padding-bottom: 1.25rem;
-    position: relative;
-    display: inline-block;
-    line-height: 1.15;
-    letter-spacing: -0.5px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--primary-green, #1E5A3C);
 }
 
+.eyebrow-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 0.65rem;
+    border-radius: 16px;
+    background: var(--primary-green, #1E5A3C);
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-size: 0.78rem;
+    box-shadow: 0 2px 8px rgba(30, 90, 60, 0.25);
+}
+
+.eyebrow-line {
+    display: inline-block;
+    width: 44px;
+    height: 2px;
+    background: var(--primary-green, #1E5A3C);
+    opacity: 0.7;
+}
+
+.eyebrow-label {
+    color: var(--text-gray, #475569);
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 2.2px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-dark, #0f172a);
+    margin: 0 auto 1.6rem;
+    padding: 0 1rem 1.6rem;
+    position: relative;
+    display: inline-block;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+/* Double-line academic underline (thin + thick) */
 .section-title::after {
     content: "";
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 64px;
-    height: 4px;
+    width: 96px;
+    height: 1px;
     background: var(--primary-green, #1E5A3C);
-    border-radius: 2px;
+    opacity: 0.5;
+    box-shadow:
+        0 5px 0 0 var(--primary-green, #1E5A3C),
+        0 10px 0 0 rgba(30, 90, 60, 0.35);
 }
 
 /* Uniform override: every section uses the same centered header layout */
@@ -1067,56 +1121,22 @@ h4.team-subsection-title::after {
     display: inline-block;
 }
 
+/* Green accent word inside title (e.g. "About CFSBR" → "CFSBR" in green) */
+.section-title .text-green {
+    color: var(--primary-green, #1E5A3C);
+    font-style: italic;
+    font-weight: 700;
+}
+
 .section-subtitle {
-    font-size: 1.125rem;
-    color: var(--text-gray);
+    font-size: 1.1rem;
+    color: var(--text-gray, #475569);
     max-width: 720px;
     margin: 0 auto;
-    line-height: 1.7;
-}
-
-/* Section eyebrow tag (number + label only — clean and uniform) */
-.section-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 1.25rem;
+    line-height: 1.75;
+    font-style: italic;
     font-family: 'Inter', -apple-system, sans-serif;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--primary-green, #1E5A3C);
-}
-
-.eyebrow-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 30px;
-    height: 30px;
-    padding: 0 0.6rem;
-    border-radius: 15px;
-    background: var(--primary-green, #1E5A3C);
-    color: #fff;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    font-size: 0.78rem;
-}
-
-.eyebrow-line {
-    display: inline-block;
-    width: 40px;
-    height: 3px;
-    background: var(--primary-green, #1E5A3C);
-    border-radius: 2px;
-}
-
-.eyebrow-label {
-    color: var(--text-gray, #475569);
-    font-weight: 700;
-    font-size: 0.78rem;
-    letter-spacing: 2px;
+    font-weight: 400;
 }
 
 /* Section divider (subtle visual separator between major blocks) */
