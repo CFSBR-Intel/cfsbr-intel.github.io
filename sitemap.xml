@@ -44,6 +44,14 @@
         <priority>0.85</priority>
     </url>
 
+    <!-- Publications: CCPM Institutional White Paper 002 -->
+    <url>
+        <loc>https://cfsbr.gmrafi.com.bd/publications/cfsbr-ccpm-framework-2026</loc>
+        <lastmod>2026-07-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
     <!-- Global Brand (cfsbr.com) -->
     <url>
         <loc>https://cfsbr.com/</loc>
@@ -68,12 +76,28 @@
         <priority>0.85</priority>
     </url>
 
+    <!-- Global Brand: CCPM Institutional White Paper 002 -->
+    <url>
+        <loc>https://cfsbr.com/publications/cfsbr-ccpm-framework-2026</loc>
+        <lastmod>2026-07-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
     <!-- Publications: Call for Papers — Institutional White Paper Series -->
     <url>
         <loc>https://cfsbr-intel.github.io/publications/call-for-institutional-papers</loc>
         <lastmod>2026-06-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- Mirror: CCPM Institutional White Paper 002 -->
+    <url>
+        <loc>https://cfsbr-intel.github.io/publications/cfsbr-ccpm-framework-2026</loc>
+        <lastmod>2026-07-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
     </url>
 
     <!-- About Section -->
