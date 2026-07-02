@@ -4875,8 +4875,14 @@ h4.team-subsection-title::after {
     font-weight: 700;
 }
 
-/* (c) Citation generator parent card — was previously unstyled */
-.citation-generator {
+/* (c) Citation generator parent card — was previously unstyled.
+   NOTE: `:not(.sidebar-cta)` excludes the white-paper pages where
+   `.citation-generator` is composed onto `.sidebar-cta` (the dark
+   gradient card). Without this guard, the white background here wins
+   over `.sidebar-cta`'s dark gradient (same specificity, later rule),
+   leaving the `.sidebar-cta h4` / `.sidebar-cta p` white text on a
+   white card → classic white-on-white bug in the cite block. */
+.citation-generator:not(.sidebar-cta) {
     background: var(--white, #ffffff);
     border: 1px solid var(--border-gray, #e5e7eb);
     border-radius: 12px;
