@@ -402,7 +402,7 @@
                         </div>
 
                         <div class="citation-output" id="citation-output" aria-live="polite" aria-atomic="true">
-                            <div class="citation-placeholder">Loading citation...</div>
+                            <div class="citation-placeholder">Loading citation from Crossref…</div>
                         </div>
 
                         <div class="citation-actions">
@@ -507,58 +507,297 @@
     </footer>
 
     <script>
-        if (window.lucide) window.lucide.createIcons();
+        // Initialize Lucide icons
+        lucide.createIcons();
 
-        const citationOutput = document.getElementById('citation-output');
-        const copyButton = document.getElementById('citation-copy');
-        const refreshButton = document.getElementById('citation-refresh');
-        const tabs = Array.from(document.querySelectorAll('.citation-tab'));
+        // ───────────────────────────────────────────────
+        // Citation Generator — fetches Crossref metadata
+        // and renders APA / MLA / Chicago formats.
+        // ───────────────────────────────────────────────
+        (function () {
+            const DOI = '10.67226/cfsbr.wp.2026.002.v1';
+            const API = `https://api.crossref.org/works/${encodeURIComponent(DOI)}`;
+            const CACHE_KEY = `cfsbr_citation_${DOI}`;
+            const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
 
-        if (citationOutput && copyButton && tabs.length) {
-            const templates = {
-                apa: 'Zoa, A. T., &amp; Rafi, M. G. M. (2026). <em>Campus Co-Publishing Model (CCPM): Strategic Operational Framework for University Clubs, Societies, and Departments</em>. CFSBR White Paper Series. https://doi.org/10.67226/cfsbr.wp.2026.002.v1',
-                mla: 'Zoa, Afshara Tasneem, and Md Golam Mubasshir Rafi. <em>Campus Co-Publishing Model (CCPM): Strategic Operational Framework for University Clubs, Societies, and Departments</em>. CFSBR White Paper Series, 2026, https://doi.org/10.67226/cfsbr.wp.2026.002.v1.',
-                chicago: 'Zoa, Afshara Tasneem, and Md Golam Mubasshir Rafi. "Campus Co-Publishing Model (CCPM): Strategic Operational Framework for University Clubs, Societies, and Departments." <em>CFSBR White Paper Series</em>, 2026. https://doi.org/10.67226/cfsbr.wp.2026.002.v1.'
-            };
+            const tabs = document.querySelectorAll('.citation-tab');
+            const output = document.getElementById('citation-output');
+            const copyBtn = document.getElementById('citation-copy');
+            const refreshBtn = document.getElementById('citation-refresh');
 
-            let activeFormat = 'apa';
+            if (!output || !tabs.length) return;
 
-            function renderCitation(format) {
-                activeFormat = format;
-                citationOutput.innerHTML = `<div class="citation-output-text">${templates[format]}</div>`;
-                copyButton.disabled = false;
-                tabs.forEach(tab => {
-                    const isActive = tab.dataset.format === format;
-                    tab.classList.toggle('is-active', isActive);
-                    tab.setAttribute('aria-selected', String(isActive));
+            let currentFormat = 'apa';
+            let lastRendered = '';
+
+            // --- Format helpers -------------------------------------------------
+            function escapeHtml(s) {
+                if (s === undefined || s === null) return '';
+                return String(s)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            function authorListAPA(authors) {
+                if (!authors || !authors.length) return '';
+                const formatted = authors.map((a, i) => {
+                    const family = a.family || (a.name ? a.name.split(' ').slice(-1)[0] : '');
+                    const given = a.given || (a.name ? a.name.split(' ').slice(0, -1).join(' ') : '');
+                    const initials = given
+                        .split(/\s+/)
+                        .filter(Boolean)
+                        .map(n => n[0].toUpperCase() + '.')
+                        .join(' ');
+                    return `${escapeHtml(family)}, ${escapeHtml(initials)}`;
                 });
+                if (formatted.length === 1) return formatted[0];
+                if (formatted.length === 2) return `${formatted[0]}, & ${formatted[1]}`;
+                return formatted.slice(0, -1).join(', ') + ', & ' + formatted[formatted.length - 1];
             }
 
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => renderCitation(tab.dataset.format || 'apa'));
-            });
+            function authorListMLA(authors) {
+                if (!authors || !authors.length) return '';
+                const formatted = authors.map((a, i) => {
+                    const family = a.family || (a.name ? a.name.split(' ').slice(-1)[0] : '');
+                    const given = a.given || (a.name ? a.name.split(' ').slice(0, -1).join(' ') : '');
+                    if (i === 0) {
+                        return `${escapeHtml(family)}, ${escapeHtml(given)}`;
+                    }
+                    return `${escapeHtml(given)} ${escapeHtml(family)}`;
+                });
+                if (formatted.length === 1) return formatted[0];
+                if (formatted.length === 2) return `${formatted[0]}, and ${formatted[1]}`;
+                return formatted.slice(0, -1).join(', ') + ', and ' + formatted[formatted.length - 1];
+            }
 
-            copyButton.addEventListener('click', async () => {
-                try {
-                    await navigator.clipboard.writeText(citationOutput.innerText.trim());
-                    const original = copyButton.innerHTML;
-                    copyButton.innerHTML = '<i data-lucide="badge-check" style="width:14px;height:14px;"></i> Copied!';
-                    if (window.lucide) window.lucide.createIcons();
-                    setTimeout(() => {
-                        copyButton.innerHTML = original;
-                        if (window.lucide) window.lucide.createIcons();
-                    }, 1800);
-                } catch (error) {
-                    console.error('Copy failed', error);
+            function authorListChicago(authors) {
+                if (!authors || !authors.length) return '';
+                const formatted = authors.map((a, i) => {
+                    const family = a.family || (a.name ? a.name.split(' ').slice(-1)[0] : '');
+                    const given = a.given || (a.name ? a.name.split(' ').slice(0, -1).join(' ') : '');
+                    if (i === 0) {
+                        return `${escapeHtml(family)}, ${escapeHtml(given)}`;
+                    }
+                    return `${escapeHtml(given)} ${escapeHtml(family)}`;
+                });
+                if (formatted.length === 1) return formatted[0];
+                if (formatted.length === 2) return `${formatted[0]} and ${formatted[1]}`;
+                return formatted.slice(0, -1).join(', ') + ', and ' + formatted[formatted.length - 1];
+            }
+
+            function publisherPlace(publisher) {
+                if (!publisher) return '';
+                return escapeHtml(publisher);
+            }
+
+            function buildAPA(meta) {
+                const authors = authorListAPA(meta.author);
+                const year = (meta.issued && meta.issued['date-parts'] && meta.issued['date-parts'][0] && meta.issued['date-parts'][0][0]) || '';
+                const title = meta.title && meta.title[0] ? meta.title[0] : '';
+                const container = meta['container-title'] && meta['container-title'][0] ? meta['container-title'][0] : '';
+                const volume = meta.volume || '';
+                const issue = meta.issue || '';
+                const page = meta.page || '';
+                const publisher = publisherPlace(meta.publisher);
+                const doiUrl = `https://doi.org/${DOI}`;
+
+                let s = '';
+                if (authors) s += authors + ' ';
+                s += `(${year}). `;
+                if (title) s += `<i>${escapeHtml(title)}</i>. `;
+                if (container) s += `<i>${escapeHtml(container)}</i>`;
+                if (volume) s += `, <i>${escapeHtml(volume)}</i>`;
+                if (issue) s += `(${escapeHtml(issue)})`;
+                if (page) s += `, ${escapeHtml(page)}`;
+                if (container || volume || page) s += '. ';
+                if (publisher && !container) s += `${publisher}. `;
+                s += `https://doi.org/${DOI}`;
+                return s.trim();
+            }
+
+            function buildMLA(meta) {
+                const authors = authorListMLA(meta.author);
+                const year = (meta.issued && meta.issued['date-parts'] && meta.issued['date-parts'][0] && meta.issued['date-parts'][0][0]) || '';
+                const title = meta.title && meta.title[0] ? meta.title[0] : '';
+                const container = meta['container-title'] && meta['container-title'][0] ? meta['container-title'][0] : '';
+                const volume = meta.volume || '';
+                const issue = meta.issue || '';
+                const page = meta.page || '';
+                const publisher = publisherPlace(meta.publisher);
+
+                let s = '';
+                if (authors) s += authors + '. ';
+                if (title) s += `"${escapeHtml(title)}." `;
+                if (container) s += `<i>${escapeHtml(container)}</i>`;
+                if (volume) s += `, vol. ${escapeHtml(volume)}`;
+                if (issue) s += `, no. ${escapeHtml(issue)}`;
+                if (year) s += `, ${year}`;
+                if (page) s += `, pp. ${escapeHtml(page)}`;
+                if (container || volume || year) s += '. ';
+                if (publisher && !container) s += `${publisher}, `;
+                s += `doi:${DOI}.`;
+                return s.trim();
+            }
+
+            function buildChicago(meta) {
+                const authors = authorListChicago(meta.author);
+                const year = (meta.issued && meta.issued['date-parts'] && meta.issued['date-parts'][0] && meta.issued['date-parts'][0][0]) || '';
+                const title = meta.title && meta.title[0] ? meta.title[0] : '';
+                const container = meta['container-title'] && meta['container-title'][0] ? meta['container-title'][0] : '';
+                const publisher = publisherPlace(meta.publisher);
+
+                let s = '';
+                if (authors) s += authors + '. ';
+                if (year) s += `${year}. `;
+                if (title) s += `"${escapeHtml(title)}." `;
+                if (container) s += `<i>${escapeHtml(container)}</i>. `;
+                if (publisher && !container) s += `${publisher}. `;
+                s += `https://doi.org/${DOI}.`;
+                return s.trim();
+            }
+
+            function formatCitation(meta, format) {
+                if (!meta) return '';
+                if (format === 'mla') return buildMLA(meta);
+                if (format === 'chicago') return buildChicago(meta);
+                return buildAPA(meta);
+            }
+
+            // --- Render / state ------------------------------------------------
+            function setActiveTab(format) {
+                currentFormat = format;
+                tabs.forEach(t => {
+                    const isActive = t.dataset.format === format;
+                    t.classList.toggle('is-active', isActive);
+                    t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                });
+                if (currentMeta) renderCitation();
+            }
+
+            function renderCitation() {
+                if (!currentMeta) return;
+                const html = formatCitation(currentMeta, currentFormat);
+                output.innerHTML = html;
+                lastRendered = html
+                    .replace(/<i>(.*?)<\/i>/g, '$1')
+                    .replace(/&amp;/g, '&')
+                    .replace(/&lt;/g, '<')
+                    .replace(/&gt;/g, '>')
+                    .replace(/&quot;/g, '"')
+                    .replace(/&#39;/g, "'");
+                if (copyBtn) {
+                    copyBtn.disabled = false;
+                    copyBtn.classList.add('is-ready');
                 }
-            });
-
-            if (refreshButton) {
-                refreshButton.addEventListener('click', () => renderCitation(activeFormat));
             }
 
-            renderCitation('apa');
-        }
+            // --- Cache + fetch -------------------------------------------------
+            function loadCache() {
+                try {
+                    const raw = localStorage.getItem(CACHE_KEY);
+                    if (!raw) return null;
+                    const wrapped = JSON.parse(raw);
+                    if (!wrapped || !wrapped.ts || !wrapped.data) return null;
+                    if (Date.now() - wrapped.ts > CACHE_TTL_MS) return null;
+                    return wrapped.data;
+                } catch (e) {
+                    return null;
+                }
+            }
+
+            function saveCache(data) {
+                try {
+                    localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data }));
+                } catch (e) { /* quota exceeded — ignore */ }
+            }
+
+            let currentMeta = null;
+
+            function showError(message) {
+                output.innerHTML = `<div class="citation-error">${escapeHtml(message)}</div>`;
+                if (copyBtn) {
+                    copyBtn.disabled = true;
+                    copyBtn.classList.remove('is-ready');
+                }
+            }
+
+            function showLoading() {
+                output.innerHTML = '<div class="citation-placeholder">Loading citation from Crossref…</div>';
+                if (copyBtn) {
+                    copyBtn.disabled = true;
+                    copyBtn.classList.remove('is-ready');
+                }
+            }
+
+            async function fetchMeta(force) {
+                if (!force) {
+                    const cached = loadCache();
+                    if (cached) {
+                        currentMeta = cached;
+                        renderCitation();
+                        return;
+                    }
+                }
+                showLoading();
+                try {
+                    const res = await fetch(API, { headers: { 'Accept': 'application/json' } });
+                    if (!res.ok) throw new Error(`Crossref responded with HTTP ${res.status}`);
+                    const json = await res.json();
+                    if (!json.message) throw new Error('Crossref response missing message payload');
+                    currentMeta = json.message;
+                    saveCache(currentMeta);
+                    renderCitation();
+                } catch (err) {
+                    console.error('Citation fetch failed:', err);
+                    showError('Could not reach Crossref. The citation will appear once the API responds — your network may be blocking the request.');
+                }
+            }
+
+            // --- Copy to clipboard --------------------------------------------
+            async function copyToClipboard() {
+                if (!lastRendered) return;
+                try {
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        await navigator.clipboard.writeText(lastRendered);
+                    } else {
+                        const ta = document.createElement('textarea');
+                        ta.value = lastRendered;
+                        ta.style.position = 'fixed';
+                        ta.style.opacity = '0';
+                        document.body.appendChild(ta);
+                        ta.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(ta);
+                    }
+                    if (copyBtn) {
+                        const original = copyBtn.innerHTML;
+                        copyBtn.innerHTML = '<i data-lucide="check" style="width: 14px; height: 14px;"></i> Copied!';
+                        copyBtn.classList.add('is-copied');
+                        if (window.lucide) lucide.createIcons();
+                        setTimeout(() => {
+                            copyBtn.innerHTML = original;
+                            copyBtn.classList.remove('is-copied');
+                            if (window.lucide) lucide.createIcons();
+                        }, 1800);
+                    }
+                } catch (e) {
+                    console.error('Copy failed:', e);
+                }
+            }
+
+            // --- Wire up -------------------------------------------------------
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => setActiveTab(tab.dataset.format));
+            });
+            if (copyBtn) copyBtn.addEventListener('click', copyToClipboard);
+            if (refreshBtn) refreshBtn.addEventListener('click', () => fetchMeta(true));
+
+            // Kick off initial load
+            fetchMeta(false);
+        })();
     </script>
 </body>
 </html>
